@@ -1,356 +1,873 @@
+"""
+Chef Planner MVP 0.2
+A Streamlit app for planning recipes based on customer segments, templates, and ingredients.
+New in 0.2: Recipe variant generation, target-based pricing, rating system, segment fit scoring.
+"""
+
 import streamlit as st
-import json
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import random
-import numpy as np
-from collections import defaultdict, Counter
+from typing import Dict, List, Any, Optional
 
-# Configurazione pagina
+# Import our modules
+from data_loaders import load_and_validate_data
+from templates_catalog import (get_all_templates, get_templates_by_category,
+                              get_unlock_suggestions, check_template_compatibility,
+                              get_template_description)
+from domain_utils import (find_ingredient_by_name, get_ingredient_names, build_matches_lookup,
+                         get_top_partners, create_flavor_radar_data, get_section_names,
+                         get_customer_section_info, format_customer_expectations,
+                         format_customer_weights, search_ingredients, validate_template_unlock,
+                         calculate_total_unlock_cost, template_category, is_gourmet_segment,
+                         format_role_display, get_ingredient_display_info)
+
+# Import MVP 0.2 modules
+from logic.generator import generate_variants, RecipeVariant
+from logic.pricing import target_based_tiering, get_cost_deviation_badge, get_tier_display_name
+from logic.rating import get_rating_breakdown, segment_fit
+
+# Page configuration
 st.set_page_config(
-    page_title="Chef Game - Generatore Menu Intelligente",
-    page_icon="🍽️",
+    page_title="Chef Planner MVP 0.2",
+    page_icon="👨‍🍳",
     layout="wide"
 )
 
-@st.cache_data
-def load_data():
-    """Carica tutti i dati JSON"""
-    with open('customer_types.json', 'r', encoding='utf-8') as f:
-        customers = json.load(f)
+def initialize_session_state():
+    """Initialize session state variables"""
+    if 'unlocked_templates' not in st.session_state:
+        st.session_state.unlocked_templates = []
+    if 'available_points' not in st.session_state:
+        st.session_state.available_points = 50
+    if 'data_loaded' not in st.session_state:
+        st.session_state.data_loaded = False
+    if 'customers' not in st.session_state:
+        st.session_state.customers = []
+    if 'ingredients' not in st.session_state:
+        st.session_state.ingredients = []
+    if 'matches' not in st.session_state:
+        st.session_state.matches = []
+    if 'matches_lookup' not in st.session_state:
+        st.session_state.matches_lookup = {}
+    # New in MVP 0.2
+    if 'menu_items' not in st.session_state:
+        st.session_state.menu_items = []
+    if 'generated_variants' not in st.session_state:
+        st.session_state.generated_variants = []
 
-    with open('recipes_database.json', 'r', encoding='utf-8') as f:
-        recipes = json.load(f)
+def render_sidebar():
+    """Render the sidebar with data loading and main controls"""
+    st.sidebar.header("🎛️ Chef Planner Controls")
 
-    with open('ingredients_data.json', 'r', encoding='utf-8') as f:
-        ingredients = json.load(f)
+    # Data loading section
+    st.sidebar.subheader("📁 Data Files")
 
-    with open('matches_data.json', 'r', encoding='utf-8') as f:
-        matches = json.load(f)
+    col1, col2 = st.sidebar.columns(2)
+    with col1:
+        customers_path = st.text_input("Customer Types", value="customer_types.json", key="customers_path")
+    with col2:
+        if st.button("📂", help="Browse for customer types file", key="browse_customers"):
+            st.info("File browser not implemented in this MVP")
 
-    return customers, recipes, ingredients, matches
+    col1, col2 = st.sidebar.columns(2)
+    with col1:
+        ingredients_path = st.text_input("Ingredients", value="ingredients_data.json", key="ingredients_path")
+    with col2:
+        if st.button("📂", help="Browse for ingredients file", key="browse_ingredients"):
+            st.info("File browser not implemented in this MVP")
 
-def calculate_recipe_appeal(recipe, customer_type, customer_data, ingredients_data):
-    """Calcola l'appeal di una ricetta per un tipo di cliente"""
-    score = 0
+    col1, col2 = st.sidebar.columns(2)
+    with col1:
+        matches_path = st.text_input("Matches", value="matches_data.json", key="matches_path")
+    with col2:
+        if st.button("📂", help="Browse for matches file", key="browse_matches"):
+            st.info("File browser not implemented in this MVP")
 
-    # Score base dalla valutazione
-    base_score = recipe.get('evaluation_base', 50) / 100
-    score += base_score * customer_data.get('evaluation_score_weight', 0.5)
+    # Load data button
+    if st.sidebar.button("🔄 Load Data", type="primary"):
+        with st.spinner("Loading and validating data..."):
+            customers, ingredients, matches, warnings = load_and_validate_data(
+                customers_path, ingredients_path, matches_path
+            )
 
-    # Score prezzo (inverso per i cheapskate)
-    price_score = 1 - (recipe.get('estimated_cost', 5) / 20)  # Normalizza a max 20€
-    if customer_type == 'Cheapskate':
-        price_score = 1 - price_score  # Inverti per cheapskate
-    score += price_score * customer_data.get('price_score_weight', 0.5)
+            if customers and ingredients and matches:
+                st.session_state.customers = customers
+                st.session_state.ingredients = ingredients
+                st.session_state.matches = matches
+                st.session_state.matches_lookup = build_matches_lookup(matches)
+                st.session_state.data_loaded = True
+                st.sidebar.success(f"✅ Data loaded successfully!")
+                st.sidebar.info(f"📊 {len(customers)} segments, {len(ingredients)} ingredients, {len(matches)} matches")
 
-    # Score tag preferiti
-    recipe_tags = set()
-    for ingredient in recipe.get('ingredients', []):
-        ingredient_name = ingredient['name'].replace('Tier1', '').replace('Tier2', '').replace('Tier3', '')
-        # Trova i tag dell'ingrediente
-        for ing_data in ingredients_data:
-            if ingredient_name in ing_data['name']:
-                recipe_tags.update(ing_data.get('tags', []))
-                break
+                if warnings:
+                    with st.sidebar.expander("⚠️ Warnings"):
+                        for warning in warnings[:10]:  # Show first 10 warnings
+                            st.warning(warning)
+            else:
+                st.sidebar.error("❌ Failed to load data")
 
-    tag_score = 0
-    favorite_tags = customer_data.get('favourite_tags', [])
-    secondary_tags = customer_data.get('secondary_favourite_tags', [])
+    # Show data status
+    if st.session_state.data_loaded:
+        st.sidebar.success("📊 Data Ready")
 
-    for tag in favorite_tags:
-        if tag in recipe_tags:
-            tag_score += 1
+        # Customer segment selector
+        if st.session_state.customers:
+            customer_names = [customer['name'] for customer in st.session_state.customers]
+            selected_customer_name = st.sidebar.selectbox(
+                "👥 Customer Segment",
+                customer_names,
+                key="selected_customer"
+            )
 
-    for tag in secondary_tags:
-        if tag in recipe_tags:
-            tag_score += 0.5
+            # Find selected customer data
+            selected_customer = next(
+                (c for c in st.session_state.customers if c['name'] == selected_customer_name),
+                None
+            )
 
-    if favorite_tags or secondary_tags:
-        tag_score = tag_score / (len(favorite_tags) + len(secondary_tags) * 0.5)
+            if selected_customer:
+                # Show customer info
+                with st.sidebar.expander(f"ℹ️ {selected_customer_name} Info"):
+                    fav_tags = selected_customer.get('favourite_tags', [])
+                    sec_tags = selected_customer.get('secondary_favourite_tags', [])
 
-    score += tag_score * customer_data.get('tag_score_weight', 0.3)
+                    st.write("**Favorite Tags:**")
+                    if fav_tags:
+                        st.write(", ".join(fav_tags))
+                    else:
+                        st.write("None specified")
 
-    # Compatibilità ingredienti
-    compatibility_score = recipe.get('compatibility_score', 2.5) / 5
-    score += compatibility_score * 0.2
+                    st.write("**Secondary Tags:**")
+                    if sec_tags:
+                        st.write(", ".join(sec_tags))
+                    else:
+                        st.write("None specified")
 
-    return min(score, 1.0)  # Cap a 1.0
+                    st.write("**Priorities:**")
+                    st.write(format_customer_weights(selected_customer))
 
-def generate_menu_for_customer(customer_type, recipes_by_section, customer_data, ingredients_data):
-    """Genera un menù ottimizzato per un tipo di cliente"""
-    menu = {}
-    total_cost = 0
+                # Section selector
+                sections = get_section_names()
+                selected_section = st.sidebar.selectbox(
+                    "🍽️ Menu Section",
+                    sections,
+                    key="selected_section"
+                )
 
-    # Sezioni del menù in ordine di priorità
-    sections = ['Appetizer', 'Salad', 'Soup', 'MainCourse', 'SideDish', 'Dessert']
+                # Show cost expectation
+                if selected_section:
+                    section_info = get_customer_section_info(selected_customer, selected_section)
+                    cost_expectation = section_info.get('cost_expectation', 10.0)
+                    probability = section_info.get('probability', 0.5)
 
-    for section in sections:
-        if section not in recipes_by_section or not recipes_by_section[section]:
-            continue
+                    st.sidebar.metric(
+                        "💰 Expected Cost",
+                        f"€{cost_expectation:.1f}",
+                        help=f"Probability: {probability:.1%}"
+                    )
+    else:
+        st.sidebar.warning("📁 Please load data files first")
 
-        # Calcola appeal per tutte le ricette della sezione
-        recipe_appeals = []
-        for recipe in recipes_by_section[section]:
-            appeal = calculate_recipe_appeal(recipe, customer_type, customer_data, ingredients_data)
-            recipe_appeals.append((recipe, appeal))
+    # Points and template unlock
+    st.sidebar.subheader("🏆 Template Unlock System")
 
-        # Ordina per appeal e prendi le migliori
-        recipe_appeals.sort(key=lambda x: x[1], reverse=True)
+    available_points = st.sidebar.number_input(
+        "Available Points",
+        min_value=0,
+        max_value=500,
+        value=st.session_state.available_points,
+        step=5,
+        key="points_input"
+    )
+    st.session_state.available_points = available_points
 
-        # Seleziona 2-4 ricette per sezione
-        num_recipes = min(random.randint(2, 4), len(recipe_appeals))
-        selected_recipes = [recipe for recipe, _ in recipe_appeals[:num_recipes]]
+    # Template unlock interface
+    render_template_unlock_panel()
 
-        menu[section] = selected_recipes
-        total_cost += sum(recipe.get('estimated_cost', 0) for recipe in selected_recipes)
+def render_template_unlock_panel():
+    """Render the template unlock panel in sidebar"""
+    templates = get_all_templates()
+    templates_by_category = get_templates_by_category()
 
-    return menu, total_cost
+    # Calculate current spending
+    current_spending = calculate_total_unlock_cost(st.session_state.unlocked_templates)
+    remaining_points = st.session_state.available_points - current_spending
 
-def display_recipe_card(recipe):
-    """Mostra una carta ricetta con dettagli"""
-    with st.container():
-        col1, col2 = st.columns([2, 1])
+    st.sidebar.write(f"**Points Used:** {current_spending} / {st.session_state.available_points}")
+    st.sidebar.write(f"**Remaining:** {remaining_points}")
 
-        with col1:
-            st.subheader(f"🍽️ {recipe.get('descriptive_name', recipe['name'])}")
-            st.write(f"**Categoria:** {recipe.get('menu_section', 'N/A')}")
-            st.write(f"**Tier:** {recipe.get('tier', 1)}")
+    if remaining_points < 0:
+        st.sidebar.error("❌ Over budget! Please unlock fewer templates.")
 
-            # Ingredienti
-            if 'ingredients' in recipe and recipe['ingredients']:
-                st.write("**Ingredienti:**")
-                for ingredient in recipe['ingredients']:
-                    category_icon = "⭐" if ingredient.get('category') == 'IMPORTANT' else "•"
-                    st.write(f"{category_icon} {ingredient['name']} ({ingredient['quantity']})")
+    # Template categories
+    for category, category_templates in templates_by_category.items():
+        with st.sidebar.expander(f"📋 {category} ({len(category_templates)} templates)"):
+            for template in category_templates:
+                template_name = template.name
 
-        with col2:
-            # Metriche
-            col2a, col2b = st.columns(2)
-            with col2a:
-                st.metric("Costo", f"€{recipe.get('estimated_cost', 0):.2f}")
-                st.metric("Valutazione", f"{recipe.get('evaluation_base', 50)}/100")
-            with col2b:
-                st.metric("Compatibilità", f"{recipe.get('compatibility_score', 2.5):.1f}/5")
-                st.metric("Tempo", f"{recipe.get('eating_time', 300)/60:.0f} min")
+                # Check if already unlocked
+                is_unlocked = template_name in st.session_state.unlocked_templates
 
-def main():
-    st.title("🍽️ Chef Game - Generatore Menu Intelligente")
-    st.markdown("### Crea menù personalizzati in base alla clientela del tuo ristorante")
+                # Check if can afford
+                can_afford = template.points <= remaining_points or is_unlocked
 
-    # Carica dati
-    try:
-        customers, recipes, ingredients, matches = load_data()
-    except FileNotFoundError as e:
-        st.error(f"❌ Errore nel caricamento dei file: {e}")
-        st.info("Assicurati che tutti i file JSON siano nella stessa directory dell'app.")
+                # Create checkbox
+                col1, col2 = st.columns([3, 1])
+                with col1:
+                    new_state = st.checkbox(
+                        f"{template_name}",
+                        value=is_unlocked,
+                        disabled=not can_afford and not is_unlocked,
+                        key=f"template_{template_name}"
+                    )
+                with col2:
+                    if template.points == 0:
+                        st.write("🆓")
+                    else:
+                        st.write(f"{template.points}pts")
+
+                # Update state
+                if new_state != is_unlocked:
+                    if new_state:
+                        st.session_state.unlocked_templates.append(template_name)
+                    else:
+                        st.session_state.unlocked_templates.remove(template_name)
+                    st.rerun()
+
+                # Show status
+                if not can_afford and not is_unlocked:
+                    st.write(f"⚠️ Need {template.points - remaining_points} more points")
+
+def render_configurator_tab():
+    """Render the main configurator tab"""
+    st.header("👨‍🍳 Recipe Configurator")
+
+    if not st.session_state.data_loaded:
+        st.warning("⚠️ Please load data files from the sidebar first")
         return
 
-    # Ricette già organizzate per sezione
-    recipes_by_section = recipes.get('recipes_by_section', {})
+    # Template selection
+    st.subheader("🎯 Template Selection")
 
-    # Sidebar per controlli
-    st.sidebar.header("🎛️ Configurazione Menu")
+    # Filter templates
+    unlocked_templates = [name for name in st.session_state.unlocked_templates]
+    all_templates = get_all_templates()
 
-    # Selezione tipo cliente
-    customer_names = [customer['name'] for customer in customers]
-    selected_customer = st.sidebar.selectbox(
-        "Tipo di Clientela",
-        customer_names,
-        help="Seleziona il tipo di clientela predominante del tuo ristorante"
+    col1, col2 = st.columns(2)
+    with col1:
+        show_locked = st.checkbox("Show locked templates", value=False)
+
+    if show_locked:
+        available_templates = list(all_templates.keys())
+    else:
+        available_templates = unlocked_templates
+
+    if not available_templates:
+        st.warning("⚠️ No templates available. Please unlock some templates in the sidebar.")
+        return
+
+    # Template selector
+    selected_template = st.selectbox(
+        "Select Template",
+        available_templates,
+        format_func=lambda x: f"{x} {'🔒' if x not in unlocked_templates else '✅'} ({all_templates[x].points} pts)",
+        key="selected_template"
     )
 
-    # Trova dati cliente selezionato
-    customer_data = None
-    for customer in customers:
-        if customer['name'] == selected_customer:
-            customer_data = customer
-            break
+    if selected_template:
+        template_obj = all_templates[selected_template]
 
-    # Opzioni aggiuntive
-    st.sidebar.subheader("⚙️ Opzioni Avanzate")
-    max_cost = st.sidebar.slider("Budget Massimo per Ricetta (€)", 1.0, 20.0, 10.0, 0.5)
-    min_quality = st.sidebar.selectbox("Qualità Minima", ["NORMAL", "FIRST_CHOICE", "GOURMET"])
-    show_stats = st.sidebar.checkbox("Mostra Statistiche Avanzate", value=True)
+        # Show template info
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.info(f"**Category:** {template_obj.category}")
+        with col2:
+            st.info(f"**Points:** {template_obj.points}")
+        with col3:
+            if selected_template in unlocked_templates:
+                st.success("✅ Unlocked")
+            else:
+                st.error("🔒 Locked")
 
-    # Bottone genera menù
-    if st.sidebar.button("🎲 Genera Menu Personalizzato", type="primary"):
-        st.session_state.generate_menu = True
+        # Show template description
+        description = get_template_description(selected_template)
+        st.write(f"*{description}*")
 
-    # Layout principale
-    if hasattr(st.session_state, 'generate_menu') and st.session_state.generate_menu:
+        # Unlock suggestions if template is locked
+        if selected_template not in unlocked_templates:
+            st.warning(f"🔒 This template requires {template_obj.points} points to unlock")
 
-        # Genera menù
-        menu, total_cost = generate_menu_for_customer(
-            selected_customer,
-            recipes_by_section,
-            customer_data,
-            ingredients
+            # Show unlock suggestions
+            if st.session_state.customers and hasattr(st, 'session_state') and 'selected_customer' in st.session_state:
+                selected_section = st.session_state.get('selected_section', 'MainCourse')
+                suggestions = get_unlock_suggestions("Generic", selected_section)
+                if selected_template in suggestions:
+                    st.info(f"💡 **Why unlock this:** {suggestions[selected_template]}")
+
+    # Ingredient selection
+    st.subheader("🥕 Anchor Ingredient")
+
+    if st.session_state.ingredients:
+        ingredient_names = get_ingredient_names(st.session_state.ingredients)
+
+        # Search/autocomplete for ingredients
+        search_query = st.text_input(
+            "Search for main ingredient",
+            placeholder="Type ingredient name...",
+            key="ingredient_search"
         )
 
-        # Header risultati
-        st.header(f"📋 Menu Personalizzato per: {selected_customer}")
+        if search_query:
+            matching_ingredients = search_ingredients(st.session_state.ingredients, search_query)
+            if matching_ingredients:
+                selected_ingredient_name = st.selectbox(
+                    "Select from matches",
+                    matching_ingredients,
+                    key="ingredient_selector"
+                )
+            else:
+                st.warning(f"No ingredients found matching '{search_query}'")
+                selected_ingredient_name = None
+        else:
+            selected_ingredient_name = st.selectbox(
+                "Or select from all ingredients",
+                [""] + ingredient_names,
+                key="ingredient_selector_all"
+            )
 
-        # Metriche generali
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Costo Totale Menu", f"€{total_cost:.2f}")
-        with col2:
-            total_recipes = sum(len(recipes) for recipes in menu.values())
-            st.metric("Ricette Totali", total_recipes)
-        with col3:
-            avg_cost = total_cost / total_recipes if total_recipes > 0 else 0
-            st.metric("Costo Medio Ricetta", f"€{avg_cost:.2f}")
-        with col4:
-            sections_count = len([s for s in menu.values() if s])
-            st.metric("Sezioni Menu", sections_count)
+        # Show ingredient and compatibility info
+        if selected_ingredient_name:
+            ingredient = find_ingredient_by_name(st.session_state.ingredients, selected_ingredient_name)
 
-        # Mostra profilo cliente
-        if show_stats:
-            with st.expander(f"📊 Profilo Cliente: {selected_customer}"):
-                col1, col2 = st.columns(2)
+            if ingredient:
+                render_readiness_panel(selected_template, ingredient)
 
-                with col1:
-                    st.write("**Tag Preferiti:**")
-                    for tag in customer_data.get('favourite_tags', []):
-                        st.write(f"💚 {tag}")
+def render_readiness_panel(template_name: str, ingredient: Dict[str, Any]):
+    """Render the readiness panel showing compatibility and ingredient info"""
+    st.subheader("📋 Recipe Readiness Check")
 
-                    st.write("**Tag Secondari:**")
-                    for tag in customer_data.get('secondary_favourite_tags', []):
-                        st.write(f"💛 {tag}")
+    col1, col2 = st.columns(2)
 
-                with col2:
-                    st.write("**Pesi di Valutazione:**")
-                    st.write(f"Prezzo: {customer_data.get('price_score_weight', 0):.1f}")
-                    st.write(f"Qualità: {customer_data.get('evaluation_score_weight', 0):.1f}")
-                    st.write(f"Tag: {customer_data.get('tag_score_weight', 0):.1f}")
+    with col1:
+        # Template compatibility
+        st.write("**🔧 Template Compatibility**")
+        is_compatible, message = check_template_compatibility(template_name, ingredient)
 
-                    # Grafico radar delle preferenze
-                    categories = ['Prezzo', 'Qualità', 'Tag']
-                    values = [
-                        customer_data.get('price_score_weight', 0),
-                        customer_data.get('evaluation_score_weight', 0),
-                        customer_data.get('tag_score_weight', 0)
-                    ]
+        if is_compatible:
+            if message.startswith("⚠️"):
+                st.warning(message)
+            else:
+                st.success(message)
+        else:
+            st.error(message)
 
-                    fig = go.Figure(data=go.Scatterpolar(
-                        r=values,
-                        theta=categories,
-                        fill='toself',
-                        name=selected_customer
-                    ))
+        # Customer expectations (if customer selected)
+        if 'selected_customer' in st.session_state:
+            customer_name = st.session_state.selected_customer
+            selected_customer = next(
+                (c for c in st.session_state.customers if c['name'] == customer_name),
+                None
+            )
 
-                    fig.update_layout(
-                        polar=dict(
-                            radialaxis=dict(
-                                visible=True,
-                                range=[0, 1]
-                            )),
-                        showlegend=False,
-                        title="Priorità Cliente",
-                        height=300
-                    )
+            if selected_customer:
+                st.write(f"**👥 {customer_name} Expectations**")
+                expectations_text = format_customer_expectations(selected_customer)
+                st.write(expectations_text)
 
-                    st.plotly_chart(fig, use_container_width=True)
+    with col2:
+        # Top ingredient partners
+        st.write("**🤝 Top 10 Compatible Partners**")
 
-        # Mostra menu per sezioni
-        sections_display = {
-            'Appetizer': '🥗 Antipasti',
-            'Salad': '🥬 Insalate',
-            'Soup': '🍲 Zuppe',
-            'MainCourse': '🍖 Portate Principali',
-            'SideDish': '🥔 Contorni',
-            'Dessert': '🍰 Dessert'
-        }
+        if st.session_state.matches_lookup:
+            ingredient_name = ingredient.get('name', '')
+            top_partners = get_top_partners(ingredient_name, st.session_state.matches_lookup, limit=10)
 
-        for section, display_name in sections_display.items():
-            if section in menu and menu[section]:
-                st.subheader(display_name)
+            if top_partners:
+                partners_df = pd.DataFrame(top_partners, columns=['Partner', 'Match Value'])
+                partners_df['Match Quality'] = partners_df['Match Value'].map({
+                    3: '🔥 Excellent',
+                    2: '👍 Good',
+                    1: '👌 OK'
+                })
 
-                # Crea tabs per ogni ricetta della sezione
-                recipe_names = [recipe.get('descriptive_name', recipe['name'])[:30] for recipe in menu[section]]
-                tabs = st.tabs(recipe_names)
+                st.dataframe(
+                    partners_df[['Partner', 'Match Quality', 'Match Value']],
+                    use_container_width=True,
+                    hide_index=True
+                )
+            else:
+                st.info("No compatibility data found for this ingredient")
+        else:
+            st.warning("No matches data loaded")
 
-                for i, (tab, recipe) in enumerate(zip(tabs, menu[section])):
-                    with tab:
-                        display_recipe_card(recipe)
+    # Flavor profile
+    st.write("**🎨 Ingredient Flavor Profile**")
+    flavor_data = create_flavor_radar_data(ingredient)
 
-                        # Bottone per dettagli ingredienti
-                        if st.button(f"📝 Dettagli Ingredienti", key=f"details_{section}_{i}"):
-                            st.write("**Analisi Ingredienti:**")
+    if any(flavor_data.values()):
+        # Create radar chart
+        categories = list(flavor_data.keys())
+        values = list(flavor_data.values())
 
-                            ingredient_costs = []
-                            for ingredient in recipe.get('ingredients', []):
-                                # Trova costo ingrediente
-                                ingredient_name = ingredient['name'].replace('Tier1', '').replace('Tier2', '').replace('Tier3', '')
-                                cost = 0
+        fig = go.Figure(data=go.Scatterpolar(
+            r=values,
+            theta=categories,
+            fill='toself',
+            name=ingredient.get('name', 'Ingredient')
+        ))
 
-                                for ing_data in ingredients:
-                                    if ingredient_name in ing_data['name']:
-                                        quality_costs = ing_data.get('quality_costs', {})
-                                        if 'NORMAL' in quality_costs:
-                                            unit_cost = quality_costs['NORMAL'].get('unit_cost', 0)
-                                            cost = unit_cost * ingredient['quantity']
-                                        break
+        fig.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, max(values) + 1] if max(values) > 0 else [0, 5]
+                )),
+            showlegend=False,
+            title=f"Flavor Profile: {ingredient.get('name', 'Unknown')}",
+            height=400
+        )
 
-                                ingredient_costs.append({
-                                    'Ingrediente': ingredient['name'],
-                                    'Quantità': ingredient['quantity'],
-                                    'Costo': cost,
-                                    'Categoria': ingredient.get('category', 'NORMAL')
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        # Show as simple table if no flavor data
+        flavor_df = pd.DataFrame([
+            {"Flavor": k, "Intensity": v} for k, v in flavor_data.items()
+        ])
+        st.dataframe(flavor_df, use_container_width=True, hide_index=True)
+
+    # Recipe variant generation (MVP 0.2)
+    if is_compatible and 'selected_customer' in st.session_state and 'selected_section' in st.session_state:
+        render_variant_generation_section(template_name, ingredient)
+    st.write("- Template requirements")
+
+def render_ingredients_tab():
+    """Render the ingredients and matches exploration tab"""
+    st.header("🥕 Ingredients & Compatibility Explorer")
+
+    if not st.session_state.data_loaded:
+        st.warning("⚠️ Please load data files from the sidebar first")
+        return
+
+    col1, col2 = st.columns([2, 1])
+
+    with col1:
+        st.subheader("📊 Ingredients Database")
+
+        if st.session_state.ingredients:
+            # Create ingredients dataframe
+            ingredients_data = []
+            for ingredient in st.session_state.ingredients:
+                tags = ingredient.get('tags', [])
+                if isinstance(tags, str):
+                    tags = tags.split(',')
+
+                ingredients_data.append({
+                    'Name': ingredient.get('name', ''),
+                    'Tags': ', '.join(tags),
+                    'Primary Tag': tags[0] if tags else 'Unknown',
+                })
+
+            df = pd.DataFrame(ingredients_data)
+
+            # Filters
+            col_a, col_b = st.columns(2)
+            with col_a:
+                name_filter = st.text_input("Filter by name", key="ingredient_name_filter")
+            with col_b:
+                tag_filter = st.selectbox(
+                    "Filter by primary tag",
+                    ["All"] + list(df['Primary Tag'].unique()),
+                    key="ingredient_tag_filter"
+                )
+
+            # Apply filters
+            filtered_df = df.copy()
+            if name_filter:
+                filtered_df = filtered_df[filtered_df['Name'].str.contains(name_filter, case=False)]
+            if tag_filter != "All":
+                filtered_df = filtered_df[filtered_df['Primary Tag'] == tag_filter]
+
+            # Show table
+            st.dataframe(filtered_df, use_container_width=True, hide_index=True)
+
+            # Show stats
+            st.info(f"📈 Showing {len(filtered_df)} of {len(df)} ingredients")
+
+    with col2:
+        st.subheader("🔍 Ingredient Analysis")
+
+        if st.session_state.ingredients:
+            # Select ingredient for analysis
+            ingredient_names = get_ingredient_names(st.session_state.ingredients)
+            selected_name = st.selectbox(
+                "Analyze ingredient",
+                ingredient_names,
+                key="analyze_ingredient"
+            )
+
+            if selected_name:
+                ingredient = find_ingredient_by_name(st.session_state.ingredients, selected_name)
+
+                if ingredient:
+                    # Show basic info
+                    tags = ingredient.get('tags', [])
+                    if isinstance(tags, str):
+                        tags = tags.split(',')
+
+                    st.write(f"**Tags:** {', '.join(tags)}")
+
+                    # Show top partners
+                    if st.session_state.matches_lookup:
+                        top_partners = get_top_partners(selected_name, st.session_state.matches_lookup, limit=15)
+
+                        if top_partners:
+                            st.write(f"**🤝 Top Partners ({len(top_partners)}):**")
+
+                            partners_data = []
+                            for partner, match_value in top_partners:
+                                match_quality = {3: "🔥", 2: "👍", 1: "👌"}[match_value]
+                                partners_data.append({
+                                    'Partner': partner,
+                                    'Quality': match_quality,
+                                    'Value': match_value
                                 })
 
-                            df_ingredients = pd.DataFrame(ingredient_costs)
-                            st.dataframe(df_ingredients, use_container_width=True)
+                            partners_df = pd.DataFrame(partners_data)
+                            st.dataframe(partners_df, use_container_width=True, hide_index=True)
 
-    else:
-        # Pagina iniziale
-        col1, col2, col3 = st.columns([1, 2, 1])
-        with col2:
-            st.image("https://via.placeholder.com/400x200/667eea/ffffff?text=Chef+Menu+Generator",
-                    caption="Seleziona un tipo di clientela e genera il menu perfetto!")
+                            # Show match value distribution
+                            match_counts = pd.Series([mv for _, mv in top_partners]).value_counts().sort_index()
 
-        # Statistiche generali
-        st.subheader("📈 Statistiche Database")
+                            fig = px.pie(
+                                values=match_counts.values,
+                                names=[f"Level {i}" for i in match_counts.index],
+                                title="Match Quality Distribution"
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
 
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Tipi di Clientela", len(customer_names))
-        with col2:
-            # Conta tutte le ricette in tutte le sezioni
-            total_recipes = sum(len(section_recipes) for section_recipes in recipes_by_section.values())
-            st.metric("Ricette Totali", total_recipes)
-        with col3:
-            st.metric("Ingredienti", len(ingredients))
-        with col4:
-            st.metric("Compatibilità", len(matches))
+                        else:
+                            st.info("No compatibility data for this ingredient")
 
-        # Grafico distribuzione ricette per categoria
-        section_counts = {section: len(recipes_list) for section, recipes_list in recipes_by_section.items()}
+def render_settings_tab():
+    """Render the settings tab (placeholder for future features)"""
+    st.header("⚙️ Settings")
 
-        fig = px.pie(
-            values=list(section_counts.values()),
-            names=list(section_counts.keys()),
-            title="Distribuzione Ricette per Categoria"
-        )
-        st.plotly_chart(fig, use_container_width=True)
+    st.info("🚧 **Settings Panel - Coming Soon!**")
 
-        # Tabella tipi di clientela
-        st.subheader("👥 Tipi di Clientela Disponibili")
+    st.write("This section will include:")
 
-        customer_summary = []
-        for customer in customers:
-            customer_summary.append({
-                'Tipo': customer['name'],
-                'Tag Preferiti': ', '.join(customer.get('favourite_tags', [])[:3]),
-                'Focus Prezzo': f"{customer.get('price_score_weight', 0):.1f}",
-                'Focus Qualità': f"{customer.get('evaluation_score_weight', 0):.1f}"
-            })
+    col1, col2 = st.columns(2)
 
-        df_customers = pd.DataFrame(customer_summary)
-        st.dataframe(df_customers, use_container_width=True)
+    with col1:
+        st.write("**Rating & Scoring:**")
+        st.write("- Recipe rating algorithm parameters")
+        st.write("- Perk bonus weights")
+        st.write("- Quality multipliers")
+        st.write("- Compatibility scoring")
+
+        st.write("**Recipe Generation:**")
+        st.write("- Ingredient count ranges by template category")
+        st.write("- Flavor balance rules")
+        st.write("- Target-based pricing sensitivity")
+
+    with col2:
+        st.write("**UI Preferences:**")
+        st.write("- Default customer segment")
+        st.write("- Show/hide advanced features")
+        st.write("- Explanation detail level")
+
+        st.write("**Data Export:**")
+        st.write("- Menu export formats")
+        st.write("- Recipe sharing options")
+        st.write("- Data backup/restore")
+
+    # Temporary settings for this version
+    st.subheader("🔧 Current Session Settings")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        debug_mode = st.checkbox("Debug Mode", value=False, help="Show additional debugging information")
+        st.session_state.debug_mode = debug_mode
+
+    with col2:
+        explanations = st.checkbox("Show Explanations", value=True, help="Show detailed explanations throughout the app")
+        st.session_state.show_explanations = explanations
+
+
+def render_variant_generation_section(template_name: str, ingredient: Dict[str, Any]):
+    """Render recipe variant generation section (MVP 0.2)"""
+    st.subheader("🍽️ Generate Recipe Variants")
+
+    # Get current selection from session state
+    customer_name = st.session_state.selected_customer
+    section = st.session_state.selected_section
+
+    # Find customer data
+    selected_customer = next(
+        (c for c in st.session_state.customers if c['name'] == customer_name),
+        None
+    )
+
+    if not selected_customer:
+        st.error("Customer data not found")
+        return
+
+    # Get cost expectation
+    section_info = get_customer_section_info(selected_customer, section)
+    cost_expectation = section_info.get('cost_expectation', 10.0)
+
+    st.write(f"**Generating variants for:** {customer_name} → {section} → {template_name} → {ingredient.get('name', 'Unknown')}")
+    st.write(f"**Target cost:** €{cost_expectation:.1f}")
+
+    # Generate variants button
+    if st.button("🚀 Generate 3 Variants", type="primary", use_container_width=True):
+        with st.spinner("Generating recipe variants..."):
+            try:
+                # Convert data to DataFrames for the logic modules
+                ingredients_df = pd.DataFrame(st.session_state.ingredients)
+                matches_df = pd.DataFrame(st.session_state.matches)
+
+                # Generate variants
+                variants = generate_variants(
+                    segment=selected_customer,
+                    section=section,
+                    template=template_name,
+                    anchor_name=ingredient.get('name', ''),
+                    ingredients_df=ingredients_df,
+                    matches_df=matches_df,
+                    templates_meta={},  # Not used in current implementation
+                    n_variants=3
+                )
+
+                st.session_state.generated_variants = variants
+                st.success(f"✅ Generated {len(variants)} recipe variants!")
+
+            except Exception as e:
+                st.error(f"❌ Error generating variants: {str(e)}")
+                return
+
+    # Display generated variants
+    if st.session_state.generated_variants:
+        st.subheader("🎨 Recipe Variants")
+
+        for i, variant in enumerate(st.session_state.generated_variants):
+            render_variant_card(variant, i, selected_customer, section, cost_expectation, template_name)
+
+
+def render_variant_card(variant: RecipeVariant, variant_idx: int, customer: Dict[str, Any],
+                       section: str, cost_expectation: float, template_name: str):
+    """Render a single recipe variant card"""
+
+    with st.container():
+        st.markdown(f"### 🍽️ Variante {variant_idx + 1}: {variant.style.title()}")
+
+        # Convert data for processing
+        ingredients_df = pd.DataFrame(st.session_state.ingredients)
+        matches_df = pd.DataFrame(st.session_state.matches)
+
+        try:
+            # Calculate pricing and tiers
+            tiers, actual_cost, suggested_price = target_based_tiering(
+                variant, customer, section, ingredients_df, cost_expectation
+            )
+            variant.tiers = tiers
+
+            # Calculate rating
+            category = template_category(template_name)
+            is_gourmet = is_gourmet_segment(customer.get('name', ''), customer)
+            rating_breakdown = get_rating_breakdown(variant, tiers, category, ingredients_df, is_gourmet)
+
+            # Calculate segment fit
+            fit_scores = segment_fit(
+                rating_breakdown['stars'], customer, section, suggested_price, variant, ingredients_df
+            )
+
+            # Display in columns
+            col1, col2, col3 = st.columns([2, 1, 1])
+
+            with col1:
+                # Ingredients list with roles and tiers
+                st.write("**🥘 Ingredienti:**")
+                ingredient_info = []
+
+                for ing_name in variant.ingredients:
+                    role = variant.roles.get(ing_name, 'complement')
+                    tier = tiers.get(ing_name, 'NORMAL')
+                    ing_info = get_ingredient_display_info(ing_name, ingredients_df, role, tier)
+                    ingredient_info.append({
+                        'Ingrediente': ing_name,
+                        'Ruolo': format_role_display(role),
+                        'Qualità': get_tier_display_name(tier),
+                        'Costo': f"€{ing_info['cost']:.2f}"
+                    })
+
+                ingredients_table = pd.DataFrame(ingredient_info)
+                st.dataframe(ingredients_table, use_container_width=True, hide_index=True)
+
+                # Cost and pricing
+                cost_badge, badge_color = get_cost_deviation_badge(actual_cost, cost_expectation)
+                st.write(f"**💰 Costo totale:** €{actual_cost:.2f}")
+                st.write(f"**🎯 Prezzo suggerito:** €{suggested_price:.2f}")
+                if badge_color == "success":
+                    st.success(f"✅ {cost_badge}")
+                elif badge_color == "warning":
+                    st.warning(f"⚠️ {cost_badge}")
+                elif badge_color == "danger":
+                    st.error(f"❌ {cost_badge}")
+                else:
+                    st.info(f"ℹ️ {cost_badge}")
+
+            with col2:
+                # Rating breakdown
+                stars = rating_breakdown['stars']
+                st.metric("⭐ Rating", f"{stars:.1f}/5.0")
+
+                with st.expander("📊 Rating Breakdown"):
+                    st.write(f"**Base:** {rating_breakdown['evaluation_base']}")
+                    st.write(f"**Perk Bonus:** +{rating_breakdown['perk_bonus']}")
+                    st.write(f"**Quality Bonus:** +{rating_breakdown['quality_bonus']}")
+                    st.write(f"**Compatibility:** +{rating_breakdown['compatibility_bonus']}")
+                    st.write(f"**Complexity:** {rating_breakdown['complexity_tuning']:+.1f}")
+                    st.write(f"**Total:** {rating_breakdown['total_score']:.1f}/20")
+
+                # Active perks
+                if rating_breakdown['active_perks']:
+                    st.write("**🏆 Perk Attivi:**")
+                    for perk in rating_breakdown['active_perks']:
+                        st.write(f"• {perk}")
+
+            with col3:
+                # Segment fit
+                total_fit = fit_scores['total_fit']
+                st.metric("🎯 Segment Fit", f"{total_fit:.0f}%")
+
+                with st.expander("📈 Fit Breakdown"):
+                    st.write(f"**Price Fit:** {fit_scores['price_fit']:.0f}%")
+                    st.write(f"**Tag Fit:** {fit_scores['tag_fit']:.0f}%")
+                    st.write(f"**Eval Fit:** {fit_scores['eval_fit']:.0f}%")
+
+                # Add to menu button
+                if st.button(f"📋 Aggiungi al Menu", key=f"add_variant_{variant_idx}", use_container_width=True):
+                    menu_item = {
+                        'template': template_name,
+                        'anchor': variant.ingredients[0],
+                        'style': variant.style,
+                        'ingredients': variant.ingredients,
+                        'roles': variant.roles,
+                        'tiers': tiers,
+                        'cost': actual_cost,
+                        'price': suggested_price,
+                        'stars': stars,
+                        'segment_fit': total_fit,
+                        'customer': customer.get('name', ''),
+                        'section': section,
+                        'notes': variant.notes
+                    }
+                    st.session_state.menu_items.append(menu_item)
+                    st.success("✅ Aggiunto al menu!")
+
+            # Recipe notes
+            st.write(f"**📝 Note:** {variant.notes}")
+
+        except Exception as e:
+            st.error(f"Error processing variant: {str(e)}")
+
+        st.markdown("---")
+
+
+def render_menu_preview_tab():
+    """Render the menu preview tab showing added recipes"""
+    st.header("📋 Menu Preview")
+
+    if not st.session_state.menu_items:
+        st.info("📝 **Menu vuoto** - Aggiungi delle ricette dal Configurator per vederle qui!")
+
+        if st.session_state.data_loaded:
+            st.write("**Come aggiungere ricette al menu:**")
+            st.write("1. Vai al tab **🎯 Configurator**")
+            st.write("2. Seleziona segmento cliente, sezione, template e ingrediente principale")
+            st.write("3. Clicca su **🚀 Generate 3 Variants**")
+            st.write("4. Clicca **📋 Aggiungi al Menu** sulla variante che preferisci")
+
+        return
+
+    st.success(f"📋 **Menu corrente:** {len(st.session_state.menu_items)} ricette")
+
+    # Menu summary
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        total_cost = sum(item['cost'] for item in st.session_state.menu_items)
+        st.metric("💰 Costo Totale", f"€{total_cost:.2f}")
+
+    with col2:
+        avg_rating = sum(item['stars'] for item in st.session_state.menu_items) / len(st.session_state.menu_items)
+        st.metric("⭐ Rating Medio", f"{avg_rating:.1f}/5.0")
+
+    with col3:
+        avg_fit = sum(item['segment_fit'] for item in st.session_state.menu_items) / len(st.session_state.menu_items)
+        st.metric("🎯 Fit Medio", f"{avg_fit:.0f}%")
+
+    # Menu items table
+    st.subheader("🍽️ Ricette nel Menu")
+
+    menu_data = []
+    for i, item in enumerate(st.session_state.menu_items):
+        menu_data.append({
+            'ID': i + 1,
+            'Template': item['template'],
+            'Anchor': item['anchor'],
+            'Stile': item['style'].title(),
+            'Cliente': item['customer'],
+            'Sezione': item['section'],
+            'Costo': f"€{item['cost']:.2f}",
+            'Prezzo': f"€{item['price']:.2f}",
+            'Rating': f"{item['stars']:.1f}⭐",
+            'Fit': f"{item['segment_fit']:.0f}%"
+        })
+
+    menu_df = pd.DataFrame(menu_data)
+    st.dataframe(menu_df, use_container_width=True, hide_index=True)
+
+    # Clear menu button
+    col1, col2 = st.columns([3, 1])
+    with col2:
+        if st.button("🗑️ Svuota Menu", type="secondary"):
+            st.session_state.menu_items = []
+            st.rerun()
+
+
+def main():
+    """Main application function"""
+    # Initialize session state
+    initialize_session_state()
+
+    # App header
+    st.title("👨‍🍳 Chef Planner MVP 0.2")
+    st.markdown("*Smart recipe planning with variant generation and rating system*")
+
+    # Render sidebar
+    render_sidebar()
+
+    # Main content tabs
+    tab1, tab2, tab3, tab4 = st.tabs(["🎯 Configurator", "🥕 Ingredients & Matches", "📋 Menu Preview", "⚙️ Settings"])
+
+    with tab1:
+        render_configurator_tab()
+
+    with tab2:
+        render_ingredients_tab()
+
+    with tab3:
+        render_menu_preview_tab()
+
+    with tab4:
+        render_settings_tab()
+
+    # Footer
+    st.markdown("---")
+    st.markdown("*Chef Planner MVP 0.2 - Recipe variant generation with target-based pricing and rating system*")
 
 if __name__ == "__main__":
     main()
