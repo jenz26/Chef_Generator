@@ -1,0 +1,17 @@
+# Comandi per aggiornare l'app su GitHub
+
+# 1. Aggiungi le modifiche
+git add app.py
+
+# 2. Commit delle correzioni
+git commit -m "Fix: Corretto errore KeyError per struttura JSON
+
+- Fixed recipes['recipes'] -> recipes_by_section
+- Fixed conteggio ricette totali
+- Fixed grafico distribuzione categorie
+- App ora compatibile con la struttura JSON corretta"
+
+# 3. Push delle modifiche
+git push origin master
+
+# L'app su Streamlit si aggiornerà automaticamente in ~2-3 minuti

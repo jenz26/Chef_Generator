@@ -148,12 +148,8 @@ def main():
         st.info("Assicurati che tutti i file JSON siano nella stessa directory dell'app.")
         return
 
-    # Organizza ricette per sezione
-    recipes_by_section = defaultdict(list)
-    for recipe in recipes['recipes']:
-        section = recipe.get('menu_section')
-        if section:
-            recipes_by_section[section].append(recipe)
+    # Ricette già organizzate per sezione
+    recipes_by_section = recipes.get('recipes_by_section', {})
 
     # Sidebar per controlli
     st.sidebar.header("🎛️ Configurazione Menu")
@@ -322,14 +318,16 @@ def main():
         with col1:
             st.metric("Tipi di Clientela", len(customer_names))
         with col2:
-            st.metric("Ricette Totali", len(recipes['recipes']))
+            # Conta tutte le ricette in tutte le sezioni
+            total_recipes = sum(len(section_recipes) for section_recipes in recipes_by_section.values())
+            st.metric("Ricette Totali", total_recipes)
         with col3:
             st.metric("Ingredienti", len(ingredients))
         with col4:
             st.metric("Compatibilità", len(matches))
 
         # Grafico distribuzione ricette per categoria
-        section_counts = Counter(recipe.get('menu_section') for recipe in recipes['recipes'])
+        section_counts = {section: len(recipes_list) for section, recipes_list in recipes_by_section.items()}
 
         fig = px.pie(
             values=list(section_counts.values()),
