@@ -1,8 +1,35 @@
-# 👨‍🍳 Chef Planner MVP 0.3
+# 👨‍🍳 Chef Planner MVP 0.3.1
 
 A Streamlit web application for planning recipes and optimizing menus based on customer segments, template unlocks, and ingredient compatibility - built specifically for *Chef: A Restaurant Tycoon Game*.
 
-## 🎯 Current Features (MVP 0.3)
+## 🎯 Current Features (MVP 0.3.1 - UI Refactor)
+
+### 🆕 **Quick Start Wizard** *(NEW in 0.3.1)*
+- **4-step guided workflow**: Clientela → Sezione → Template → Ingrediente
+- **Visual customer cards**: Easy segment selection with preferences and focus display
+- **Smart template suggestions**: Shows compatible templates for selected section
+- **Ingredient compatibility**: Real-time compatibility checking with visual indicators
+- **Auto-recipe generation**: Generates 3 recipe variants at the final step
+
+### 🆕 **Recipe Studio** *(NEW in 0.3.1)*
+- **2-column layout**: Configuration on left, preview on right
+- **Advanced controls**: Full control over customer, section, template, and ingredient
+- **Real-time validation**: Template-ingredient compatibility warnings
+- **Multiple variants**: Generate and compare Classico, Fresco, and Umami styles
+- **One-click addition**: Add any variant directly to your menu
+
+### 🆕 **Simplified Menu Builder** *(NEW in 0.3.1)*
+- **Essential KPIs**: Menu health, rating, fit, and coherence in clear metrics
+- **Quick management**: Simple recipe list with expand/collapse details
+- **Three export formats**: CSV for Excel, JSON for technical use, comprehensive reports
+- **Smart recommendations**: Top 3 warnings and improvement suggestions
+
+### 🆕 **Expert Mode** *(NEW in 0.3.1)*
+- **All advanced features**: Complete access to original MVP 0.3 functionality
+- **Three sub-tabs**: Advanced Configuration, Deep Analytics, Ingredient Database
+- **Power user interface**: For users who need full control and detailed analysis
+
+## 🎯 Established Features (MVP 0.3)
 
 ### 🆕 **Advanced Menu Builder** *(NEW in 0.3)*
 - **Complete menu management**: Edit, duplicate, delete recipes with one click
@@ -198,11 +225,37 @@ Array of ingredient compatibility pairs:
 ]
 ```
 
-## 🎮 How to Use
+## 🎮 How to Use (MVP 0.3.1 - New Interface)
+
+### 🚀 **Quick Start (Recommended for New Users)**
+1. **Load Data**: Click "📁 File Dati" in sidebar, specify JSON file paths, click "🔄 Carica Dati"
+2. **Start Wizard**: Click "🎯 Inizia Quick Start" button on the main screen
+3. **4-Step Process**: Follow the guided wizard through Clientela → Sezione → Template → Ingrediente
+4. **Generate & Add**: Choose from 3 recipe variants and add to your menu with one click
+
+### 🧪 **Recipe Studio (For Advanced Control)**
+1. **Configure Left Panel**: Select customer segment, menu section, template, and ingredient
+2. **Real-time Validation**: See compatibility warnings and suggestions as you select
+3. **Generate Variants**: Click "🎨 Genera Ricette" to create 3 different styles
+4. **Preview & Add**: Review ingredient lists, ratings, and pricing on the right panel
+
+### 🎯 **Menu Builder (Manage Your Menu)**
+1. **View KPIs**: See menu health score, rating average, and coherence metrics
+2. **Quick Management**: Expand recipe cards to view details and delete unwanted items
+3. **Export Options**: Download as CSV (Excel), JSON (technical), or comprehensive report
+
+### 👨‍💼 **Expert Mode (Power Users)**
+- **Advanced Configuration**: Access to all original configurator features
+- **Deep Analytics**: Complete KPI dashboard with charts and detailed analysis
+- **Ingredient Database**: Full ingredient explorer with compatibility charts
+
+---
+
+## 🎮 Detailed Usage Instructions (All Versions)
 
 ### 1. **Load Your Data**
 - Use the sidebar to specify paths to your 3 JSON files
-- Click "🔄 Load Data" to import and validate
+- Click "🔄 Carica Dati" to import and validate
 - Check for any warnings about missing fields
 
 ### 2. **Select Customer & Section**
@@ -345,7 +398,15 @@ This is **MVP 0.3** with advanced menu management, KPIs, and export functionalit
 
 ## 🔄 Version History
 
-### MVP 0.3 (Current)
+### MVP 0.3.1 (Current) - UI Refactor
+- ✅ **Quick Start Wizard**: 4-step guided workflow with visual customer cards and auto-generation
+- ✅ **Recipe Studio**: 2-column layout with advanced controls and real-time validation
+- ✅ **Simplified Menu Builder**: Essential KPIs dashboard with quick management and export
+- ✅ **Expert Mode**: All advanced features organized in dedicated expert interface
+- ✅ **Improved UX**: Better microcopy, Italian localization, intuitive navigation
+- ✅ **Guided Experience**: Smart onboarding for new users with contextual help
+
+### MVP 0.3
 - ✅ **Advanced Menu Builder**: Complete recipe management with edit/duplicate/delete
 - ✅ **Menu Intelligence**: KPI dashboard with health scoring (0-100 points)
 - ✅ **Variety Analysis**: Smart warnings for redundancies, gaps, and imbalances
