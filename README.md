@@ -1,8 +1,34 @@
-# 👨‍🍳 Chef Planner MVP 0.2
+# 👨‍🍳 Chef Planner MVP 0.3
 
 A Streamlit web application for planning recipes and optimizing menus based on customer segments, template unlocks, and ingredient compatibility - built specifically for *Chef: A Restaurant Tycoon Game*.
 
-## 🎯 Current Features (MVP 0.2)
+## 🎯 Current Features (MVP 0.3)
+
+### 🆕 **Advanced Menu Builder** *(NEW in 0.3)*
+- **Complete menu management**: Edit, duplicate, delete recipes with one click
+- **Advanced KPI dashboard**: Menu health score, rating trends, price coherence
+- **Section coverage analysis**: Visual charts comparing actual vs expected distribution
+- **Recipe management table**: Sortable view with all recipe details and actions
+
+### 🆕 **Menu Intelligence & Analytics** *(NEW in 0.3)*
+- **Variety warnings**: Smart detection of redundancies, gaps, and imbalances
+- **Menu health scoring**: 0-100 composite score based on quality, fit, and coherence
+- **Complexity analysis**: Ingredient count statistics and segment appropriateness
+- **Tag coverage tracking**: Monitor favorite/expected tag representation
+
+### 🆕 **Smart Unlock Recommendations** *(NEW in 0.3)*
+- **Context-aware suggestions**: Templates recommended based on current menu gaps
+- **Budget-conscious advice**: Recommendations within available point budget
+- **Segment-specific priorities**: Suggestions tailored to customer segment preferences
+- **Strategic guidance**: Signature dishes and section coverage improvements
+
+### 🆕 **Professional Export System** *(NEW in 0.3)*
+- **CSV export**: Structured data for spreadsheet analysis
+- **JSON export**: Complete recipe data for integration and backup
+- **Comprehensive reports**: Executive summaries with KPIs, warnings, and recommendations
+- **Timestamped outputs**: All exports include generation metadata
+
+## 🎯 Established Features (MVP 0.2)
 
 ### 🆕 **Recipe Variant Generation** *(NEW in 0.2)*
 - **Auto-generate 2-3 recipe variants** from customer segment, section, template, and anchor ingredient
@@ -107,6 +133,10 @@ chef_menu_generator/
 │   ├── generator.py      # Recipe variant generation engine
 │   ├── pricing.py        # Target-based pricing and tier selection
 │   └── rating.py         # Rating system and segment fit scoring
+├── menu/                  # MVP 0.3 advanced menu management
+│   ├── __init__.py       # Package marker
+│   ├── analytics.py      # Menu KPIs, warnings, and recommendations
+│   └── serializer.py     # Export functionality (CSV/JSON/Report)
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
 └── [data files]          # Your JSON data files
@@ -203,7 +233,25 @@ Array of ingredient compatibility pairs:
 - Monitor menu analytics: total cost, average rating, segment fit
 - Clear menu when ready to start fresh
 
-### 7. **Browse Ingredients & Matches**
+### 7. **Manage Your Menu** *(NEW in 0.3)*
+- Switch to "📋 Menu Builder Avanzato" tab to see comprehensive analytics
+- Review KPI dashboard: health score, rating, price coherence, complexity
+- Check variety warnings and recommendations for menu improvements
+- Use section coverage chart to balance menu distribution
+
+### 8. **Advanced Menu Management** *(NEW in 0.3)*
+- **Edit recipes**: Change ingredient quality tiers and add notes
+- **Duplicate recipes**: Create variations of successful recipes
+- **Delete recipes**: Remove unwanted items from menu
+- **Export menu**: Download as CSV, JSON, or comprehensive report
+
+### 9. **Export & Analysis** *(NEW in 0.3)*
+- **CSV export**: Import into Excel/Sheets for further analysis
+- **JSON export**: Technical format for integration or backup
+- **Professional report**: Executive summary with KPIs and recommendations
+- **Preview reports** before downloading to review content
+
+### 10. **Browse Ingredients & Matches**
 - Filter ingredients by name or tag
 - Analyze any ingredient's compatibility network
 - View match quality distributions
@@ -248,14 +296,15 @@ Array of ingredient compatibility pairs:
 
 ## 🚧 Coming in Future Iterations
 
-This is **MVP 0.2** with recipe generation, rating, and menu building! Next iterations will add:
+This is **MVP 0.3** with advanced menu management, KPIs, and export functionality! Future versions will add:
 
-- **🔍 Advanced Recipe Analysis**: Nutritional analysis and dietary restrictions
-- **📈 Business Analytics**: ROI analysis, profit optimization, and cost tracking
-- **📋 Full Menu Validation**: Multi-section menu balance and customer flow
-- **📤 Export & Integration**: Menu export formats and game integration
-- **🤖 AI Recommendations**: Smart template suggestions and ingredient substitutions
-- **👥 Multi-Customer Menus**: Optimize menus for multiple customer segments
+- **🍽️ Multi-Menu Management**: Compare and manage multiple menu versions
+- **📊 Advanced Business Analytics**: ROI analysis, profit margin optimization, seasonal trends
+- **🎯 Customer Flow Simulation**: Predict order patterns and kitchen workflow
+- **🤖 AI-Powered Optimization**: Machine learning for ingredient substitutions and cost optimization
+- **🎮 Game Integration**: Direct export to Chef game format and real-time data sync
+- **👥 Team Collaboration**: Share menus, collaborative editing, and team feedback
+- **📱 Mobile Companion**: iOS/Android app for on-the-go menu management
 
 ## 🐛 Troubleshooting
 
@@ -279,9 +328,33 @@ This is **MVP 0.2** with recipe generation, rating, and menu building! Next iter
 - Red warnings mean incompatible combinations
 - Yellow warnings are suggestions (e.g., "add pasta base")
 
+### "Export not working"
+- Menu must contain at least one recipe to export
+- Check browser download settings if files don't download
+- Report previews are available in expanders before download
+
+### "Menu health score seems wrong"
+- Score is calculated from multiple factors: ratings, fit, price coherence, warnings
+- Add more recipes to get more accurate scoring
+- Review warnings panel for specific improvement areas
+
+### "KPIs showing unexpected values"
+- Ensure customer segment is selected for accurate analysis
+- KPIs are calculated based on current menu and segment expectations
+- Some metrics require minimum number of recipes for meaningful results
+
 ## 🔄 Version History
 
-### MVP 0.2 (Current)
+### MVP 0.3 (Current)
+- ✅ **Advanced Menu Builder**: Complete recipe management with edit/duplicate/delete
+- ✅ **Menu Intelligence**: KPI dashboard with health scoring (0-100 points)
+- ✅ **Variety Analysis**: Smart warnings for redundancies, gaps, and imbalances
+- ✅ **Smart Recommendations**: Context-aware template unlock suggestions
+- ✅ **Professional Exports**: CSV, JSON, and comprehensive report generation
+- ✅ **Section Analytics**: Visual charts comparing actual vs expected distribution
+- ✅ **Enhanced UI**: 4-tab interface with advanced menu management capabilities
+
+### MVP 0.2
 - ✅ Recipe variant generation engine with 3 distinct styles (Classico, Fresco, Umami)
 - ✅ Target-based pricing with automatic tier selection (Normal/First Choice/Gourmet)
 - ✅ Comprehensive 1-5 star rating system with perk detection
@@ -297,11 +370,11 @@ This is **MVP 0.2** with recipe generation, rating, and menu building! Next iter
 - ✅ Template-ingredient compatibility checking
 - ✅ Interactive UI with sidebar controls
 
-### Planned MVP 0.3
-- 🔜 Advanced recipe analysis and nutritional data
-- 🔜 Business analytics and ROI optimization
-- 🔜 Multi-customer menu optimization
-- 🔜 Export functionality and game integration
+### Planned Future Versions
+- 🔜 Multi-menu management and comparison tools
+- 🔜 Advanced business analytics and ROI optimization
+- 🔜 AI-powered recommendations and optimization
+- 🔜 Game integration and mobile companion app
 
 ---
 

@@ -1,7 +1,7 @@
 """
-Chef Planner MVP 0.2
+Chef Planner MVP 0.3
 A Streamlit app for planning recipes based on customer segments, templates, and ingredients.
-New in 0.2: Recipe variant generation, target-based pricing, rating system, segment fit scoring.
+New in 0.3: Advanced menu builder, KPIs, variety analysis, recommendations, export functionality.
 """
 
 import streamlit as st
@@ -27,9 +27,13 @@ from logic.generator import generate_variants, RecipeVariant
 from logic.pricing import target_based_tiering, get_cost_deviation_badge, get_tier_display_name
 from logic.rating import get_rating_breakdown, segment_fit
 
+# Import MVP 0.3 modules
+from menu.analytics import menu_kpis, variety_warnings, unlock_recommendations, menu_health_score, get_menu_variety_stats
+from menu.serializer import export_menu_csv, export_menu_json, export_report_text, get_export_filename
+
 # Page configuration
 st.set_page_config(
-    page_title="Chef Planner MVP 0.2",
+    page_title="Chef Planner MVP 0.3",
     page_icon="👨‍🍳",
     layout="wide"
 )
@@ -55,6 +59,11 @@ def initialize_session_state():
         st.session_state.menu_items = []
     if 'generated_variants' not in st.session_state:
         st.session_state.generated_variants = []
+    # New in MVP 0.3
+    if 'suggested_unlocks' not in st.session_state:
+        st.session_state.suggested_unlocks = []
+    if 'menu_analytics_cache' not in st.session_state:
+        st.session_state.menu_analytics_cache = {}
 
 def render_sidebar():
     """Render the sidebar with data loading and main controls"""
@@ -749,6 +758,10 @@ def render_variant_card(variant: RecipeVariant, variant_idx: int, customer: Dict
 
                 # Add to menu button
                 if st.button(f"📋 Aggiungi al Menu", key=f"add_variant_{variant_idx}", use_container_width=True):
+                    # Collect tags for analytics
+                    from domain_utils import collect_tags
+                    ingredient_tags = collect_tags(variant.ingredients, ingredients_df)
+
                     menu_item = {
                         'template': template_name,
                         'anchor': variant.ingredients[0],
@@ -762,7 +775,9 @@ def render_variant_card(variant: RecipeVariant, variant_idx: int, customer: Dict
                         'segment_fit': total_fit,
                         'customer': customer.get('name', ''),
                         'section': section,
-                        'notes': variant.notes
+                        'notes': variant.notes,
+                        'tag_set': ingredient_tags,
+                        'fit_breakdown': fit_scores
                     }
                     st.session_state.menu_items.append(menu_item)
                     st.success("✅ Aggiunto al menu!")
@@ -777,65 +792,370 @@ def render_variant_card(variant: RecipeVariant, variant_idx: int, customer: Dict
 
 
 def render_menu_preview_tab():
-    """Render the menu preview tab showing added recipes"""
-    st.header("📋 Menu Preview")
+    """Render the advanced Menu Builder tab (MVP 0.3)"""
+    st.header("📋 Menu Builder Avanzato")
 
     if not st.session_state.menu_items:
-        st.info("📝 **Menu vuoto** - Aggiungi delle ricette dal Configurator per vederle qui!")
+        st.info("📝 **Menu vuoto** - Aggiungi delle ricette dal Configurator per iniziare!")
 
         if st.session_state.data_loaded:
-            st.write("**Come aggiungere ricette al menu:**")
-            st.write("1. Vai al tab **🎯 Configurator**")
-            st.write("2. Seleziona segmento cliente, sezione, template e ingrediente principale")
-            st.write("3. Clicca su **🚀 Generate 3 Variants**")
-            st.write("4. Clicca **📋 Aggiungi al Menu** sulla variante che preferisci")
-
+            st.write("**Come costruire il tuo menu:**")
+            st.write("1. 🎯 Vai al **Configurator** e seleziona segmento cliente + sezione")
+            st.write("2. 🍽️ Genera varianti e aggiungi quelle che preferisci")
+            st.write("3. 📊 Ritorna qui per vedere KPI, warnings e suggerimenti")
+            st.write("4. 📤 Esporta il menu finale in CSV/JSON/Report")
         return
 
-    st.success(f"📋 **Menu corrente:** {len(st.session_state.menu_items)} ricette")
+    # Get current customer context for analytics
+    current_customer = None
+    current_segment_name = "Menu"
+    if 'selected_customer' in st.session_state and st.session_state.customers:
+        customer_name = st.session_state.selected_customer
+        current_customer = next((c for c in st.session_state.customers if c['name'] == customer_name), None)
+        current_segment_name = customer_name
 
-    # Menu summary
-    col1, col2, col3 = st.columns(3)
+    # Prepare sections metadata for KPI calculation
+    sections_meta = {}
+    if current_customer:
+        customer_sections = current_customer.get('sections', {})
+        for section, info in customer_sections.items():
+            sections_meta[section] = info
+
+    # Calculate KPIs and analytics
+    kpis = menu_kpis(st.session_state.menu_items, current_customer or {}, sections_meta)
+    warnings = variety_warnings(st.session_state.menu_items, current_customer or {})
+
+    # Menu Health Score
+    health_score = menu_health_score(kpis, len(warnings))
+
+    # Header with health score
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.success(f"📋 **Menu: {kpis['n_items']} ricette** | **Segmento:** {current_segment_name}")
+    with col2:
+        color = "🟢" if health_score >= 80 else "🟡" if health_score >= 60 else "🔴"
+        st.metric("🏆 Menu Health", f"{color} {health_score}/100")
+
+    # KPI Cards
+    st.subheader("📊 KPI Dashboard")
+
+    kpi_col1, kpi_col2, kpi_col3, kpi_col4 = st.columns(4)
+
+    with kpi_col1:
+        stars_color = "🟢" if kpis['avg_stars'] >= 4.0 else "🟡" if kpis['avg_stars'] >= 3.0 else "🔴"
+        st.metric("⭐ Rating Medio", f"{kpis['avg_stars']:.1f}/5.0", delta=None, help=f"{stars_color} Qualità media dei piatti")
+
+    with kpi_col2:
+        fit_color = "🟢" if kpis['avg_fit_total'] >= 80 else "🟡" if kpis['avg_fit_total'] >= 60 else "🔴"
+        st.metric("🎯 Segment Fit", f"{kpis['avg_fit_total']:.0f}%", delta=None, help=f"{fit_color} Adattamento al segmento")
+
+    with kpi_col3:
+        price_color = "🟢" if kpis['avg_price_deviation_pct'] <= 10 else "🟡" if kpis['avg_price_deviation_pct'] <= 20 else "🔴"
+        st.metric("💶 Coerenza Prezzi", f"{kpis['avg_price_deviation_pct']:.1f}%", delta=None, help=f"{price_color} Deviazione dai target")
+
+    with kpi_col4:
+        complexity = kpis['complexity_stats']['avg']
+        complexity_desc = f"{complexity:.1f} ing/ricetta"
+        st.metric("🔧 Complessità", complexity_desc, delta=None, help="Media ingredienti per ricetta")
+
+    # Section Coverage Chart (if we have customer data)
+    if current_customer and sections_meta:
+        st.subheader("📈 Copertura Sezioni vs Atteso")
+
+        chart_data = []
+        for section, info in kpis['section_coverage'].items():
+            chart_data.append({
+                'Sezione': section,
+                'Attuale': info['actual_ratio'] * 100,
+                'Atteso': info['expected_ratio'] * 100,
+                'Tipo': 'Attuale'
+            })
+
+        if chart_data:
+            chart_df = pd.DataFrame(chart_data)
+
+            # Create comparison chart
+            fig = px.bar(
+                chart_df,
+                x='Sezione',
+                y=['Attuale', 'Atteso'],
+                title="Distribuzione Sezioni: Attuale vs Atteso (%)",
+                barmode='group',
+                height=300
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    # Advanced Recipe Management Table
+    st.subheader("🍽️ Gestione Ricette")
+
+    render_recipe_management_table(st.session_state.menu_items)
+
+    # Warnings and Recommendations
+    col1, col2 = st.columns(2)
 
     with col1:
-        total_cost = sum(item['cost'] for item in st.session_state.menu_items)
-        st.metric("💰 Costo Totale", f"€{total_cost:.2f}")
+        st.subheader("⚠️ Avvisi Menu")
+        if warnings:
+            for warning in warnings:
+                st.warning(warning)
+        else:
+            st.success("✅ Nessun avviso - menu equilibrato!")
 
     with col2:
-        avg_rating = sum(item['stars'] for item in st.session_state.menu_items) / len(st.session_state.menu_items)
-        st.metric("⭐ Rating Medio", f"{avg_rating:.1f}/5.0")
+        st.subheader("💡 Suggerimenti Sblocco")
+        render_unlock_recommendations_panel(current_customer or {})
 
-    with col3:
-        avg_fit = sum(item['segment_fit'] for item in st.session_state.menu_items) / len(st.session_state.menu_items)
-        st.metric("🎯 Fit Medio", f"{avg_fit:.0f}%")
+    # Export Section
+    st.subheader("📤 Esportazione Menu")
+    render_export_section(st.session_state.menu_items, kpis, warnings, current_segment_name)
 
-    # Menu items table
-    st.subheader("🍽️ Ricette nel Menu")
 
-    menu_data = []
-    for i, item in enumerate(st.session_state.menu_items):
-        menu_data.append({
-            'ID': i + 1,
-            'Template': item['template'],
-            'Anchor': item['anchor'],
-            'Stile': item['style'].title(),
-            'Cliente': item['customer'],
-            'Sezione': item['section'],
-            'Costo': f"€{item['cost']:.2f}",
-            'Prezzo': f"€{item['price']:.2f}",
-            'Rating': f"{item['stars']:.1f}⭐",
-            'Fit': f"{item['segment_fit']:.0f}%"
+def render_recipe_management_table(menu_items: List[Dict[str, Any]]):
+    """Render the advanced recipe management table with edit/delete/duplicate"""
+
+    if not menu_items:
+        return
+
+    # Create enhanced table data
+    table_data = []
+    for i, item in enumerate(menu_items):
+        table_data.append({
+            'ID': i,
+            'Nome': f"{item.get('template', 'N/A')} con {item.get('anchor', 'N/A')}",
+            'Sezione': item.get('section', 'N/A'),
+            'Template': item.get('template', 'N/A'),
+            'Rating': f"{item.get('stars', 0):.1f}⭐",
+            'Prezzo': f"€{item.get('price', 0):.2f}",
+            'Costo': f"€{item.get('cost', 0):.2f}",
+            'Fit': f"{item.get('segment_fit', 0):.0f}%",
+            'Ingredienti': len(item.get('ingredients', [])),
+            'Stile': item.get('style', 'classico').title(),
+            'Tags': ', '.join(list(item.get('tag_set', set()))[:3]) if item.get('tag_set') else 'N/A'
         })
 
-    menu_df = pd.DataFrame(menu_data)
-    st.dataframe(menu_df, use_container_width=True, hide_index=True)
+    if table_data:
+        df = pd.DataFrame(table_data)
 
-    # Clear menu button
-    col1, col2 = st.columns([3, 1])
-    with col2:
-        if st.button("🗑️ Svuota Menu", type="secondary"):
-            st.session_state.menu_items = []
-            st.rerun()
+        # Display table
+        st.dataframe(df.drop('ID', axis=1), use_container_width=True, hide_index=True)
+
+        # Action buttons row
+        st.write("**Azioni Ricette:**")
+        action_cols = st.columns([2, 2, 2, 2, 2])
+
+        with action_cols[0]:
+            recipe_to_edit = st.selectbox(
+                "Modifica ricetta",
+                options=[-1] + list(range(len(menu_items))),
+                format_func=lambda x: "Seleziona..." if x == -1 else f"{menu_items[x]['template']} ({x+1})",
+                key="edit_recipe_selector"
+            )
+
+        with action_cols[1]:
+            if recipe_to_edit >= 0 and st.button("✏️ Edit", key="edit_recipe_btn"):
+                render_edit_recipe_modal(recipe_to_edit)
+
+        with action_cols[2]:
+            recipe_to_duplicate = st.selectbox(
+                "Duplica ricetta",
+                options=[-1] + list(range(len(menu_items))),
+                format_func=lambda x: "Seleziona..." if x == -1 else f"{menu_items[x]['template']} ({x+1})",
+                key="duplicate_recipe_selector"
+            )
+
+        with action_cols[3]:
+            if recipe_to_duplicate >= 0 and st.button("📄 Duplica", key="duplicate_recipe_btn"):
+                duplicate_recipe(recipe_to_duplicate)
+
+        with action_cols[4]:
+            if st.button("🗑️ Svuota Tutto", type="secondary", key="clear_menu_btn"):
+                st.session_state.menu_items = []
+                st.rerun()
+
+
+def render_edit_recipe_modal(recipe_index: int):
+    """Render inline recipe editing interface"""
+    if recipe_index >= len(st.session_state.menu_items):
+        return
+
+    recipe = st.session_state.menu_items[recipe_index]
+
+    st.subheader(f"✏️ Modifica: {recipe.get('template', 'N/A')}")
+
+    with st.container():
+        edit_col1, edit_col2 = st.columns(2)
+
+        with edit_col1:
+            # Hero tier override
+            hero_ingredient = recipe.get('ingredients', [''])[0] if recipe.get('ingredients') else ''
+            current_hero_tier = recipe.get('tiers', {}).get(hero_ingredient, 'NORMAL')
+
+            new_hero_tier = st.selectbox(
+                f"Qualità {hero_ingredient}:",
+                options=['NORMAL', 'FIRST_CHOICE', 'GOURMET'],
+                index=['NORMAL', 'FIRST_CHOICE', 'GOURMET'].index(current_hero_tier),
+                key=f"edit_hero_tier_{recipe_index}"
+            )
+
+        with edit_col2:
+            # Notes
+            current_notes = recipe.get('notes', '')
+            new_notes = st.text_area(
+                "Note:",
+                value=current_notes,
+                max_chars=200,
+                key=f"edit_notes_{recipe_index}"
+            )
+
+        # Action buttons
+        save_col, cancel_col = st.columns(2)
+
+        with save_col:
+            if st.button("💾 Salva Modifiche", key=f"save_edit_{recipe_index}", type="primary"):
+                # Apply changes
+                if recipe.get('tiers') and hero_ingredient:
+                    recipe['tiers'][hero_ingredient] = new_hero_tier
+                recipe['notes'] = new_notes
+
+                st.success("✅ Ricetta aggiornata!")
+                st.rerun()
+
+        with cancel_col:
+            if st.button("❌ Annulla", key=f"cancel_edit_{recipe_index}"):
+                st.rerun()
+
+
+def duplicate_recipe(recipe_index: int):
+    """Duplicate a recipe in the menu"""
+    if recipe_index >= len(st.session_state.menu_items):
+        return
+
+    original_recipe = st.session_state.menu_items[recipe_index]
+
+    # Create duplicate with modifications
+    duplicate = original_recipe.copy()
+    duplicate['notes'] = f"Copia di: {duplicate.get('notes', '')}"
+
+    # Add to menu
+    st.session_state.menu_items.append(duplicate)
+    st.success(f"✅ Ricetta duplicata! Ora hai {len(st.session_state.menu_items)} ricette.")
+    st.rerun()
+
+
+def render_unlock_recommendations_panel(segment: Dict[str, Any]):
+    """Render unlock recommendations based on current menu"""
+    if not st.session_state.data_loaded:
+        st.info("Carica i dati per vedere i suggerimenti di sblocco")
+        return
+
+    # Get available data
+    templates_catalog = get_all_templates()
+    unlocked_set = set(st.session_state.unlocked_templates)
+    points_budget = st.session_state.available_points - calculate_total_unlock_cost(st.session_state.unlocked_templates)
+
+    # Generate recommendations
+    recommendations = unlock_recommendations(
+        st.session_state.menu_items,
+        segment,
+        templates_catalog,
+        unlocked_set,
+        points_budget
+    )
+
+    if recommendations:
+        for i, rec in enumerate(recommendations):
+            template = rec['template']
+            points = rec['points']
+            reason = rec['reason']
+
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.write(f"**{template}** ({points} pts)")
+                st.caption(reason)
+            with col2:
+                if st.button("➕ Segna", key=f"suggest_{i}", help="Segna per sblocco futuro"):
+                    if template not in st.session_state.suggested_unlocks:
+                        st.session_state.suggested_unlocks.append(template)
+                        st.success(f"✅ {template} aggiunto ai suggeriti")
+    else:
+        st.info("🎉 Menu completo - nessun template aggiuntivo raccomandato!")
+
+    # Show suggested unlocks
+    if st.session_state.suggested_unlocks:
+        st.write("**🔖 Template Suggeriti:**")
+        for template in st.session_state.suggested_unlocks:
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.write(f"• {template}")
+            with col2:
+                if st.button("❌", key=f"remove_suggest_{template}", help="Rimuovi suggerimento"):
+                    st.session_state.suggested_unlocks.remove(template)
+                    st.rerun()
+
+
+def render_export_section(menu_items: List[Dict[str, Any]], kpis: Dict[str, Any],
+                         warnings: List[str], segment_name: str):
+    """Render export functionality section"""
+
+    export_col1, export_col2, export_col3 = st.columns(3)
+
+    # Generate data for exports
+    recommendations = []
+    if st.session_state.data_loaded and 'selected_customer' in st.session_state:
+        customer = next((c for c in st.session_state.customers
+                        if c['name'] == st.session_state.selected_customer), {})
+        templates_catalog = get_all_templates()
+        unlocked_set = set(st.session_state.unlocked_templates)
+        points_budget = st.session_state.available_points - calculate_total_unlock_cost(st.session_state.unlocked_templates)
+        recommendations = unlock_recommendations(menu_items, customer, templates_catalog, unlocked_set, points_budget)
+
+    with export_col1:
+        if st.button("📊 Export CSV", use_container_width=True):
+            if menu_items:
+                csv_data = export_menu_csv(menu_items)
+                filename = get_export_filename('csv', segment_name)
+                st.download_button(
+                    label="⬇️ Scarica CSV",
+                    data=csv_data,
+                    file_name=filename,
+                    mime="text/csv"
+                )
+            else:
+                st.warning("Menu vuoto - niente da esportare")
+
+    with export_col2:
+        if st.button("📋 Export JSON", use_container_width=True):
+            if menu_items:
+                json_data = export_menu_json(menu_items)
+                filename = get_export_filename('json', segment_name)
+                st.download_button(
+                    label="⬇️ Scarica JSON",
+                    data=json_data,
+                    file_name=filename,
+                    mime="application/json"
+                )
+            else:
+                st.warning("Menu vuoto - niente da esportare")
+
+    with export_col3:
+        if st.button("📄 Export Report", use_container_width=True):
+            if menu_items:
+                report_data = export_report_text(menu_items, kpis, warnings, recommendations, segment_name)
+                filename = get_export_filename('report', segment_name)
+                st.download_button(
+                    label="⬇️ Scarica Report",
+                    data=report_data,
+                    file_name=filename,
+                    mime="text/plain"
+                )
+            else:
+                st.warning("Menu vuoto - niente da esportare")
+
+    # Report preview
+    if menu_items:
+        with st.expander("👁️ Anteprima Report"):
+            report_preview = export_report_text(menu_items, kpis, warnings, recommendations, segment_name)
+            st.text(report_preview[:2000] + "..." if len(report_preview) > 2000 else report_preview)
 
 
 def main():
@@ -844,8 +1164,8 @@ def main():
     initialize_session_state()
 
     # App header
-    st.title("👨‍🍳 Chef Planner MVP 0.2")
-    st.markdown("*Smart recipe planning with variant generation and rating system*")
+    st.title("👨‍🍳 Chef Planner MVP 0.3")
+    st.markdown("*Advanced menu builder with KPIs, variety analysis, and export functionality*")
 
     # Render sidebar
     render_sidebar()
@@ -867,7 +1187,7 @@ def main():
 
     # Footer
     st.markdown("---")
-    st.markdown("*Chef Planner MVP 0.2 - Recipe variant generation with target-based pricing and rating system*")
+    st.markdown("*Chef Planner MVP 0.3 - Advanced menu builder with KPIs, variety analysis, and export functionality*")
 
 if __name__ == "__main__":
     main()
