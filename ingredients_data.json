@@ -1,0 +1,9211 @@
+[
+  {
+    "name": "Allspice",
+    "descriptive_name": "AllspiceDescriptiveNameString",
+    "description": "AllspiceDescriptionString",
+    "calories": 75,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/Allspice",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.06,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.12,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.18,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Almonds",
+    "descriptive_name": "AlmondsDescriptiveNameString",
+    "description": "AlmondsDescriptionString",
+    "calories": 575,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/almonds",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 25,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Anchovies",
+    "descriptive_name": "AnchoviesDescriptiveNameString",
+    "description": "AnchoviesDescriptionString",
+    "calories": 150,
+    "cooking_time": 300,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/acciughe",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Apple",
+    "descriptive_name": "AppleDescriptiveNameString",
+    "description": "AppleDescriptionString",
+    "calories": 42,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/apple",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Apricot",
+    "descriptive_name": "ApricotDescriptiveNameString",
+    "description": "ApricotDescriptionString",
+    "calories": 28,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/albicocca",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Artichokes",
+    "descriptive_name": "ArtichokesDescriptiveNameString",
+    "description": "ArtichokesDescriptionString",
+    "calories": 18,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/artichoke",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Asparagus",
+    "descriptive_name": "AsparagusDescriptiveNameString",
+    "description": "AsparagusDescriptionString",
+    "calories": 24,
+    "cooking_time": 200,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/asparagi",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Avocado",
+    "descriptive_name": "AvocadoDescriptiveNameString",
+    "description": "AvocadoDescriptionString",
+    "calories": 200,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/avocado",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Bacon",
+    "descriptive_name": "BaconDescriptiveNameString",
+    "description": "BaconDescriptionString",
+    "calories": 500,
+    "cooking_time": 300,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bacon",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 4,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 8,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Banana",
+    "descriptive_name": "BananaDescriptiveNameString",
+    "description": "BananaDescriptionString",
+    "calories": 80,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/banana",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Basil",
+    "descriptive_name": "BasilDescriptiveNameString",
+    "description": "BasilDescriptionString",
+    "calories": 22,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/basilico",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Bass",
+    "descriptive_name": "BassDescriptiveNameString",
+    "description": "BassDescriptionString",
+    "calories": 80,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bass",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Bay_Leaves",
+    "descriptive_name": "Bay_LeavesDescriptiveNameString",
+    "description": "Bay_LeavesDescriptionString",
+    "calories": 80,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bay_leaves",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 10,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Beans",
+    "descriptive_name": "BeansDescriptiveNameString",
+    "description": "BeansDescriptionString",
+    "calories": 160,
+    "cooking_time": 450,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/beans",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "GreenBeans",
+    "descriptive_name": "GreenBeansDescriptiveNameString",
+    "description": "BeansDescriptionString",
+    "calories": 120,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/GreenBeans",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 25,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Bechamel",
+    "descriptive_name": "BechamelDescriptiveNameString",
+    "description": "BechamelDescriptionString",
+    "calories": 130,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bechamel",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Beef",
+    "descriptive_name": "BeefDescriptiveNameString",
+    "description": "BeefDescriptionString",
+    "calories": 270,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/beef",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Beet",
+    "descriptive_name": "BeetDescriptiveNameString",
+    "description": "BeetDescriptionString",
+    "calories": 400,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/barbabietola",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 7,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0055,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Biscuits",
+    "descriptive_name": "BiscuitsDescriptiveNameString",
+    "description": "BiscuitsDescriptionString",
+    "calories": 420,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/biscuits",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 5,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Black_Pepper",
+    "descriptive_name": "BlackPepperDescriptiveNameString",
+    "description": "BlackPepperDescriptionString",
+    "calories": 1,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/black_pepper",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 15,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.03,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.06,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.09,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Truffle",
+    "descriptive_name": "BlackTruffleDescriptiveNameString",
+    "description": "BlackTruffleDescriptionString",
+    "calories": 20,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/black_truffle",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 3,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.05,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.1,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.16,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Blonde_Beer",
+    "descriptive_name": "BlondeBeerDescriptiveNameString",
+    "description": "BlondeBeerDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/birra_bionda",
+    "tags": [
+      "Alcohol",
+      "Beer"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Blue_Cheese",
+    "descriptive_name": "BlueCheeseDescriptiveNameString",
+    "description": "BlueCheeseDescriptionString",
+    "calories": 55,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/blue_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Blueberries",
+    "descriptive_name": "BlueBerriesDescriptiveNameString",
+    "description": "BlueBerriesDescriptionString",
+    "calories": 55,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/blueberries",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Brandy",
+    "descriptive_name": "BrandyDescriptiveNameString",
+    "description": "BrandyDescriptionString",
+    "calories": 230,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/brandy",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 7,
+      "SALT": 0,
+      "ACID": 7,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 20,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0055,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Bread",
+    "descriptive_name": "BreadDescriptiveNameString",
+    "description": "BreadDescriptionString",
+    "calories": 300,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bread",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Breadcrumbs",
+    "descriptive_name": "BreadcrumbsDescriptiveNameString",
+    "description": "BreadcrumbsDescriptionString",
+    "calories": 300,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/breadcrumbs",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Broccoli",
+    "descriptive_name": "BroccoliDescriptiveNameString",
+    "description": "BroccoliDescriptionString",
+    "calories": 30,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/broccoli",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 7,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Butter",
+    "descriptive_name": "ButterDescriptiveNameString",
+    "description": "ButterDescriptionString",
+    "calories": 700,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/butter",
+    "tags": [
+      "Fat",
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 50,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Margarine",
+    "descriptive_name": "MargarineDescriptiveNameString",
+    "description": "MargarineDescriptionString",
+    "calories": 700,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/margarine",
+    "tags": [
+      "Fat",
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 50,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cabbage",
+    "descriptive_name": "CabbageDescriptiveNameString",
+    "description": "CabbageDescriptionString",
+    "calories": 25,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cabbage",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 7,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cauliflower",
+    "descriptive_name": "CauliflowerDescriptiveNameString",
+    "description": "CauliflowerDescriptionString",
+    "calories": 35,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cauliflower",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Capers",
+    "descriptive_name": "CapersDescriptiveNameString",
+    "description": "CapersDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/capers",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 15,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 20
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Carp",
+    "descriptive_name": "CarpDescriptiveNameString",
+    "description": "CarpDescriptionString",
+    "calories": 35,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/carp",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Carrot",
+    "descriptive_name": "CarrotDescriptiveNameString",
+    "description": "CarrotDescriptionString",
+    "calories": 35,
+    "cooking_time": 400,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/carrot",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Caviar",
+    "descriptive_name": "CaviarDescriptiveNameString",
+    "description": "CaviarDescriptionString",
+    "calories": 250,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/caviar",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 7,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 3
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 40
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 1.5,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 2.0,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 2.5,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Celery",
+    "descriptive_name": "CeleryDescriptiveNameString",
+    "description": "CeleryDescriptionString",
+    "calories": 15,
+    "cooking_time": 500,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/celery",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cherry",
+    "descriptive_name": "CherryDescriptiveNameString",
+    "description": "CherryDescriptionString",
+    "calories": 50,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cherry",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cherry_Tomato",
+    "descriptive_name": "CherryTomatoDescriptiveNameString",
+    "description": "CherryTomatoDescriptionString",
+    "calories": 25,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cherry_tomato",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chestnuts",
+    "descriptive_name": "ChestnutsDescriptiveNameString",
+    "description": "ChestnutsDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chestnut",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chicken",
+    "descriptive_name": "ChickenDescriptiveNameString",
+    "description": "ChickenDescriptionString",
+    "calories": 150,
+    "cooking_time": 720,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chicken",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0055,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.011,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.017,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chickpeas",
+    "descriptive_name": "ChickpeasDescriptiveNameString",
+    "description": "ChickpeasDescriptionString",
+    "calories": 300,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chickpeas",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chicory",
+    "descriptive_name": "ChicoryDescriptiveNameString",
+    "description": "ChicoryDescriptionString",
+    "calories": 20,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chicory",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chili_Pepper",
+    "descriptive_name": "ChiliPepperDescriptiveNameString",
+    "description": "ChiliPepperDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chili_pepper",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chocolate",
+    "descriptive_name": "ChocolateDescriptiveNameString",
+    "description": "ChocolateDescriptionString",
+    "calories": 400,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chocolate",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 5,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "WhiteChocolate",
+    "descriptive_name": "WhiteChocolateDescriptiveNameString",
+    "description": "WhiteChocolateDescriptionString",
+    "calories": 400,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chocolate",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 6,
+      "FAT": 6,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "DarkChocolate",
+    "descriptive_name": "DarkChocolateDescriptiveNameString",
+    "description": "DarkChocolateDescriptionString",
+    "calories": 400,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chocolate",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 7,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cinnamon",
+    "descriptive_name": "CinnamonDescriptiveNameString",
+    "description": "CinnamonDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cinnamon",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Clams",
+    "descriptive_name": "ClamsDescriptiveNameString",
+    "description": "ClamsDescriptionString",
+    "calories": 140,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/clams",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 7,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 1,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cloves",
+    "descriptive_name": "ClovesDescriptiveNameString",
+    "description": "ClovesDescriptionString",
+    "calories": 140,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cloves",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 20,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.024,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cocoa",
+    "descriptive_name": "CocoaDescriptiveNameString",
+    "description": "CocoaDescriptionString",
+    "calories": 250,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cocoa",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 25,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 20,
+      "LARGE": 75
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Coconut",
+    "descriptive_name": "CoconutDescriptiveNameString",
+    "description": "CoconutDescriptionString",
+    "calories": 350,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/coconut",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 7,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cod",
+    "descriptive_name": "CodDescriptiveNameString",
+    "description": "CodDescriptionString",
+    "calories": 82,
+    "cooking_time": 320,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cod",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Coffee",
+    "descriptive_name": "CoffeeDescriptiveNameString",
+    "description": "CoffeeDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/coffee",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 50,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.006,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.012,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.02,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Coriander",
+    "descriptive_name": "CorianderDescriptiveNameString",
+    "description": "CorianderDescriptionString",
+    "calories": 15,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/coriander",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Corn",
+    "descriptive_name": "CornDescriptiveNameString",
+    "description": "CornDescriptionString",
+    "calories": 365,
+    "cooking_time": 500,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/corn",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 1,
+      "ACID": 1,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cornstarch",
+    "descriptive_name": "CornstarchDescriptiveNameString",
+    "description": "CornstarchDescriptionString",
+    "calories": 365,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cornstarch",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cous_Cous",
+    "descriptive_name": "CousCousDescriptiveNameString",
+    "description": "CousCousDescriptionString",
+    "calories": 110,
+    "cooking_time": 600,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cous_cous",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cow_Cheese",
+    "descriptive_name": "CowCheeseDescriptiveNameString",
+    "description": "CowCheeseDescriptionString",
+    "calories": 250,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cow_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Crab",
+    "descriptive_name": "CrabDescriptiveNameString",
+    "description": "CrabDescriptionString",
+    "calories": 80,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/crab",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Crayfish",
+    "descriptive_name": "CrayfishDescriptiveNameString",
+    "description": "CrayfishDescriptionString",
+    "calories": 80,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/crayfish",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cream",
+    "descriptive_name": "CreamDescriptiveNameString",
+    "description": "CreamDescriptionString",
+    "calories": 340,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cream",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 1,
+      "SWEET": 2,
+      "FAT": 10,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cucumber",
+    "descriptive_name": "CucumberDescriptiveNameString",
+    "description": "CucumberDescriptionString",
+    "calories": 16,
+    "cooking_time": 200,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cucumber",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0013,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0026,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cumin",
+    "descriptive_name": "CuminDescriptiveNameString",
+    "description": "CuminDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cumin",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.038,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.07,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.1,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Curry",
+    "descriptive_name": "CurryDescriptiveNameString",
+    "description": "CurryDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/curry",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 25,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cuttlefish",
+    "descriptive_name": "CuttlefishDescriptiveNameString",
+    "description": "CuttlefishDescriptionString",
+    "calories": 80,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cuttlefish",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Dates",
+    "descriptive_name": "DatesDescriptiveNameString",
+    "description": "DatesDescriptionString",
+    "calories": 220,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/dates",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 8,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Duck",
+    "descriptive_name": "DuckDescriptiveNameString",
+    "description": "DuckDescriptionString",
+    "calories": 135,
+    "cooking_time": 660,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/anatra",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Egg",
+    "descriptive_name": "EggDescriptiveNameString",
+    "description": "EggDescriptionString",
+    "calories": 150,
+    "cooking_time": 240,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/egg",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Eggplant",
+    "descriptive_name": "EggplantDescriptiveNameString",
+    "description": "EggplantDescriptionString",
+    "calories": 25,
+    "cooking_time": 540,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/eggplant",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Fennel",
+    "descriptive_name": "FennelDescriptiveNameString",
+    "description": "FennelDescriptionString",
+    "calories": 15,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/fennel",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Figs",
+    "descriptive_name": "FigsDescriptiveNameString",
+    "description": "FigsDescriptionString",
+    "calories": 74,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/figs",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 8,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Flour",
+    "descriptive_name": "FlourDescriptiveNameString",
+    "description": "FlourDescriptionString",
+    "calories": 350,
+    "cooking_time": 300,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/flour",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Fresh_Pasta",
+    "descriptive_name": "FreshPastaDescriptiveNameString",
+    "description": "FreshPastaDescriptionString",
+    "calories": 180,
+    "cooking_time": 240,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/fresh_pasta",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Garlic",
+    "descriptive_name": "GarlicDescriptiveNameString",
+    "description": "GarlicDescriptionString",
+    "calories": 10,
+    "cooking_time": 180,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/aglio",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 10,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 15,
+      "LARGE": 45
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Gelatine",
+    "descriptive_name": "GelatineDescriptiveNameString",
+    "description": "GelatineDescriptionString",
+    "calories": 10,
+    "cooking_time": 180,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/gelatine",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.03,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.06,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.09,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Ginger",
+    "descriptive_name": "GingerDescriptiveNameString",
+    "description": "GingerDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/ginger",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Goat_Cheese",
+    "descriptive_name": "GoatCheeseDescriptiveNameString",
+    "description": "GoatCheeseDescriptionString",
+    "calories": 300,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/goat_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Grapefruit",
+    "descriptive_name": "GrapefruitDescriptiveNameString",
+    "description": "GrapefruitDescriptionString",
+    "calories": 65,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/grapefruit",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 8,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Green_Onion",
+    "descriptive_name": "GreenOnionDescriptiveNameString",
+    "description": "GreenOnionDescriptionString",
+    "calories": 90,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/green_onion",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Grouper",
+    "descriptive_name": "GrouperDescriptiveNameString",
+    "description": "GrouperDescriptionString",
+    "calories": 90,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/grouper",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 2,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Hazelnuts",
+    "descriptive_name": "HazelnutsDescriptiveNameString",
+    "description": "HazelnutsDescriptionString",
+    "calories": 650,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/hazelnut",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.03,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.06,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.09,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Honey",
+    "descriptive_name": "HoneyDescriptiveNameString",
+    "description": "HoneyDescriptionString",
+    "calories": 300,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/honey",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 25,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Jam",
+    "descriptive_name": "JamDescriptiveNameString",
+    "description": "JamDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/jam",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 10,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Ketchup",
+    "descriptive_name": "KetchupDescriptiveNameString",
+    "description": "KetchupDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/ketchup",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 2,
+      "ACID": 4,
+      "SWEET": 8,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 20,
+      "LARGE": 75
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Kiwi",
+    "descriptive_name": "KiwiDescriptiveNameString",
+    "description": "KiwiDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/kiwi",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lamb",
+    "descriptive_name": "LambDescriptiveNameString",
+    "description": "LambDescriptionString",
+    "calories": 180,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/agnello",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.04,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lard",
+    "descriptive_name": "LardDescriptiveNameString",
+    "description": "LardDescriptionString",
+    "calories": 900,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lard",
+    "tags": [
+      "Fat",
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 25,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Leek",
+    "descriptive_name": "LeekDescriptiveNameString",
+    "description": "LeekDescriptionString",
+    "calories": 60,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/leek",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lemon",
+    "descriptive_name": "LemonDescriptiveNameString",
+    "description": "LemonDescriptionString",
+    "calories": 30,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lemon",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 25,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lentils",
+    "descriptive_name": "LentilsDescriptiveNameString",
+    "description": "LentilsDescriptionString",
+    "calories": 150,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lentils",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lettuce",
+    "descriptive_name": "LettuceDescriptiveNameString",
+    "description": "LettuceDescriptionString",
+    "calories": 15,
+    "cooking_time": 180,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lettuce",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lime",
+    "descriptive_name": "LimeDescriptiveNameString",
+    "description": "LimeDescriptionString",
+    "calories": 30,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lime",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 20,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Lobster",
+    "descriptive_name": "LobsterDescriptiveNameString",
+    "description": "LobsterDescriptionString",
+    "calories": 80,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/lobster",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.06,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.12,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.18,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mango",
+    "descriptive_name": "MangoDescriptiveNameString",
+    "description": "MangoDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mango",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0045,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.009,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.014,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Maple_Syrup",
+    "descriptive_name": "MapleSyrupDescriptiveNameString",
+    "description": "MapleSyrupDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/maple_syrup",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 15,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.017,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mascarpone",
+    "descriptive_name": "MascarponeDescriptiveNameString",
+    "description": "MascarponeDescriptionString",
+    "calories": 680,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mascarpone",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 15,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0125,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mayonnaise",
+    "descriptive_name": "MayonnaiseDescriptiveNameString",
+    "description": "MayonnaiseDescriptionString",
+    "calories": 680,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mayonnaise",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 0,
+      "FAT": 20,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Melon",
+    "descriptive_name": "MelonDescriptiveNameString",
+    "description": "MelonDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/melon",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Milk",
+    "descriptive_name": "MilkDescriptiveNameString",
+    "description": "MilkDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/milk",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 1,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mint",
+    "descriptive_name": "MintDescriptiveNameString",
+    "description": "MintDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mint",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Monkfish",
+    "descriptive_name": "MonkfishDescriptiveNameString",
+    "description": "MonkfishDescriptionString",
+    "calories": 10,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/monkfish",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.03,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.06,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.09,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mortadella",
+    "descriptive_name": "MortadellaDescriptiveNameString",
+    "description": "MortadellaDescriptionString",
+    "calories": 300,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mortadella",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 6,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mozzarella",
+    "descriptive_name": "MozzarellaDescriptiveNameString",
+    "description": "MozzarellaDescriptionString",
+    "calories": 300,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mozzarella",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.006,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.012,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.02,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mullet_Bottarga",
+    "descriptive_name": "MulletBottargaDescriptiveNameString",
+    "description": "MulletBottargaDescriptionString",
+    "calories": 20,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/bottarga",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 25,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.07,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.14,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.21,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mushrooms",
+    "descriptive_name": "MushroomsDescriptiveNameString",
+    "description": "MushroomsDescriptionString",
+    "calories": 35,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mushrooms",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mussels",
+    "descriptive_name": "MusselsDescriptiveNameString",
+    "description": "MusselsDescriptionString",
+    "calories": 90,
+    "cooking_time": 480,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mussels",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 6,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 1,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mustard",
+    "descriptive_name": "MustardDescriptiveNameString",
+    "description": "MustardDescriptionString",
+    "calories": 30,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mustard",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 8,
+      "SALT": 0,
+      "ACID": 15,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 25,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0025,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.004,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Mutton",
+    "descriptive_name": "MuttonDescriptiveNameString",
+    "description": "MuttonDescriptionString",
+    "calories": 150,
+    "cooking_time": 600,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/mutton",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Noodles",
+    "descriptive_name": "NoodlesDescriptiveNameString",
+    "description": "NoodlesDescriptionString",
+    "calories": 10,
+    "cooking_time": 500,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/noodles",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Nutmeg",
+    "descriptive_name": "NutmegDescriptiveNameString",
+    "description": "NutmegDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/nutmeg",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Oats",
+    "descriptive_name": "OatsDescriptiveNameString",
+    "description": "OatsDescriptionString",
+    "calories": 380,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/oats",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Octopus",
+    "descriptive_name": "OctopusDescriptiveNameString",
+    "description": "OctopusDescriptionString",
+    "calories": 60,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/octopus",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Olive_Oil",
+    "descriptive_name": "OliveOilDescriptiveNameString",
+    "description": "OliveOilDescriptionString",
+    "calories": 800,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/olive_oil",
+    "tags": [
+      "Fat",
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 0,
+      "FAT": 75,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Olives",
+    "descriptive_name": "OlivesDescriptiveNameString",
+    "description": "OlivesDescriptionString",
+    "calories": 60,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/olives",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Onion",
+    "descriptive_name": "OnionDescriptiveNameString",
+    "description": "OnionDescriptionString",
+    "calories": 40,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/onion",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 7,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Orange",
+    "descriptive_name": "OrangeDescriptiveNameString",
+    "description": "OrangeDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/arancia",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 7,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Oregano",
+    "descriptive_name": "OreganoDescriptiveNameString",
+    "description": "OreganoDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/oregano",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 25,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Oysters",
+    "descriptive_name": "OystersDescriptiveNameString",
+    "description": "OystersDescriptionString",
+    "calories": 10,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/oysters",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 2,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Papaya",
+    "descriptive_name": "PapayaDescriptiveNameString",
+    "description": "PapayaDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/papaya",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Paprika",
+    "descriptive_name": "PaprikaDescriptiveNameString",
+    "description": "PaprikaDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/paprika",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.036,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.07,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.11,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Parmesan",
+    "descriptive_name": "ParmesanDescriptiveNameString",
+    "description": "ParmesanDescriptionString",
+    "calories": 450,
+    "cooking_time": 60,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/parmesan",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 6,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 3
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Parsley",
+    "descriptive_name": "ParsleyDescriptiveNameString",
+    "description": "ParsleyDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/parsley",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 10,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Passion_Fruit",
+    "descriptive_name": "PassionFruitDescriptiveNameString",
+    "description": "PassionFruitDescriptionString",
+    "calories": 100,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/passion_fruit",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pasta",
+    "descriptive_name": "PastaDescriptiveNameString",
+    "description": "PastaDescriptionString",
+    "calories": 350,
+    "cooking_time": 480,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pasta",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 250
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Peach",
+    "descriptive_name": "PeachDescriptiveNameString",
+    "description": "PeachDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/peach",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Peanuts",
+    "descriptive_name": "PeanutsDescriptiveNameString",
+    "description": "PeanutsDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/peanuts",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 90
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pear",
+    "descriptive_name": "PearDescriptiveNameString",
+    "description": "PearDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pear",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Peas",
+    "descriptive_name": "PeasDescriptiveNameString",
+    "description": "PeasDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/peas",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Peppers",
+    "descriptive_name": "PeppersDescriptiveNameString",
+    "description": "PeppersDescriptionString",
+    "calories": 25,
+    "cooking_time": 500,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/peppers",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pickles",
+    "descriptive_name": "PicklesDescriptiveNameString",
+    "description": "PicklesDescriptionString",
+    "calories": 25,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pickles",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 8,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pine_Nuts",
+    "descriptive_name": "PineNutsDescriptiveNameString",
+    "description": "PineNutsDescriptionString",
+    "calories": 650,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pine_nuts",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 90
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.05,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.1,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.16,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pineapple",
+    "descriptive_name": "PineappleDescriptiveNameString",
+    "description": "PineappleDescriptionString",
+    "calories": 50,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/ananas",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 8,
+      "SWEET": 8,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Plum",
+    "descriptive_name": "PlumDescriptiveNameString",
+    "description": "PlumDescriptionString",
+    "calories": 260,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/plum",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Porcini_Mushrooms",
+    "descriptive_name": "PorciniMushroomsDescriptiveNameString",
+    "description": "PorciniMushroomsDescriptionString",
+    "calories": 260,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/porcini_mushrooms",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pork",
+    "descriptive_name": "PorkDescriptiveNameString",
+    "description": "PorkDescriptionString",
+    "calories": 260,
+    "cooking_time": 600,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pork",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Potato",
+    "descriptive_name": "PotatoDescriptiveNameString",
+    "description": "PotatoDescriptionString",
+    "calories": 77,
+    "cooking_time": 680,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/potato",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Prawns",
+    "descriptive_name": "PrawnsDescriptiveNameString",
+    "description": "PrawnsDescriptionString",
+    "calories": 77,
+    "cooking_time": 300,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/prawns",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Ham",
+    "descriptive_name": "HamDescriptiveNameString",
+    "description": "HamDescriptionString",
+    "calories": 300,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/prosciutto",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 5,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pumpkin",
+    "descriptive_name": "PumpkinDescriptiveNameString",
+    "description": "PumpkinDescriptionString",
+    "calories": 25,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pumpkin",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Quail",
+    "descriptive_name": "QuailDescriptiveNameString",
+    "description": "QuailDescriptionString",
+    "calories": 140,
+    "cooking_time": 600,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/quail",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Rabbit",
+    "descriptive_name": "RabbitDescriptiveNameString",
+    "description": "RabbitDescriptionString",
+    "calories": 150,
+    "cooking_time": 600,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/rabbit",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Raisins",
+    "descriptive_name": "RaisinsDescriptiveNameString",
+    "description": "RaisinsDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/raisins",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.009,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.018,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Raspberry",
+    "descriptive_name": "RaspberryDescriptiveNameString",
+    "description": "RaspberryDescriptionString",
+    "calories": 50,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/raspberry",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Red_Beer",
+    "descriptive_name": "RedBeerDescriptiveNameString",
+    "description": "RedBeerDescriptionString",
+    "calories": 50,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/birra_rossa",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Red_Gurnard",
+    "descriptive_name": "RedGurnardDescriptiveNameString",
+    "description": "RedGurnardDescriptionString",
+    "calories": 50,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/red_gurnard",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 1,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Red_Wine",
+    "descriptive_name": "RedWineDescriptiveNameString",
+    "description": "RedWineDescriptionString",
+    "calories": 80,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/red_wine",
+    "tags": [
+      "Alcohol",
+      "Wine"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 7,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Rice",
+    "descriptive_name": "RiceDescriptiveNameString",
+    "description": "RiceDescriptionString",
+    "calories": 340,
+    "cooking_time": 660,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/riso",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.005,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Ricotta",
+    "descriptive_name": "RicottaDescriptiveNameString",
+    "description": "RicottaDescriptionString",
+    "calories": 180,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/ricotta",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Rocket_Salad",
+    "descriptive_name": "RocketSaladDescriptiveNameString",
+    "description": "RocketSaladDescriptionString",
+    "calories": 10,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/rocket_salad",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Rosemary",
+    "descriptive_name": "RosemaryDescriptiveNameString",
+    "description": "RosemaryDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/rosemary",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Rum",
+    "descriptive_name": "RumDescriptiveNameString",
+    "description": "RumDescriptionString",
+    "calories": 10,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/rum",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Saffron",
+    "descriptive_name": "SaffronDescriptiveNameString",
+    "description": "SaffronDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/saffron",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 1.5,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 2.0,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 2.5,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sage",
+    "descriptive_name": "SageDescriptiveNameString",
+    "description": "SageDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sage",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sake",
+    "descriptive_name": "SakeDescriptiveNameString",
+    "description": "SakeDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sake",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Salami",
+    "descriptive_name": "SalamiDescriptiveNameString",
+    "description": "SalamiDescriptionString",
+    "calories": 350,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/salami",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 5,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Salmon",
+    "descriptive_name": "SalmonDescriptiveNameString",
+    "description": "SalmonDescriptionString",
+    "calories": 200,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/salmon",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Salt",
+    "descriptive_name": "SaltDescriptiveNameString",
+    "description": "SaltDescriptionString",
+    "calories": 1,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/salt",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 99,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 20
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.001,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sauerkraut",
+    "descriptive_name": "SauerkrautDescriptiveNameString",
+    "description": "SauerkrautDescriptionString",
+    "calories": 1,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sauerkraut",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 3,
+      "ACID": 5,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0035,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.007,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.01,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sausage",
+    "descriptive_name": "SausageDescriptiveNameString",
+    "description": "SausageDescriptionString",
+    "calories": 300,
+    "cooking_time": 360,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sausage",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 4,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Scallops",
+    "descriptive_name": "ScallopsDescriptiveNameString",
+    "description": "ScallopsDescriptionString",
+    "calories": 100,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/scallops",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 1,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.024,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Scorpion_Fish",
+    "descriptive_name": "ScorpionFishDescriptiveNameString",
+    "description": "ScorpionFishDescriptionString",
+    "calories": 100,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/scorpion_fish",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.024,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sea_Bream",
+    "descriptive_name": "SeaBreamDescriptiveNameString",
+    "description": "SeaBreamDescriptionString",
+    "calories": 105,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sea_bream",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.013,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.026,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.04,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Seeds_Oil",
+    "descriptive_name": "SeedsOilDescriptiveNameString",
+    "description": "SeedsOilDescriptionString",
+    "calories": 900,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/seeds_oil",
+    "tags": [
+      "Fat",
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 0,
+      "FAT": 75,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Shallot",
+    "descriptive_name": "ShallotDescriptiveNameString",
+    "description": "ShallotDescriptionString",
+    "calories": 35,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/shallot",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.013,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sheep_Cheese",
+    "descriptive_name": "SheepCheeseDescriptiveNameString",
+    "description": "SheepCheeseDescriptionString",
+    "calories": 350,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sheep_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 5,
+      "ACID": 2,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 90
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Snails",
+    "descriptive_name": "SnailsDescriptiveNameString",
+    "description": "SnailsDescriptionString",
+    "calories": 350,
+    "cooking_time": 680,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/snails",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sole",
+    "descriptive_name": "SoleDescriptiveNameString",
+    "description": "SoleDescriptionString",
+    "calories": 98,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sole",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Soy",
+    "descriptive_name": "SoyDescriptiveNameString",
+    "description": "SoyDescriptionString",
+    "calories": 350,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/soy",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Soy_Milk",
+    "descriptive_name": "SoyMilkDescriptiveNameString",
+    "description": "SoyMilkDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/soy_milk",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Soy_Sauce",
+    "descriptive_name": "SoySauceDescriptiveNameString",
+    "description": "SoySauceDescriptionString",
+    "calories": 350,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/soy_sauce",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 10,
+      "ACID": 5,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.022,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Spinach",
+    "descriptive_name": "SpinachDescriptiveNameString",
+    "description": "SpinachDescriptionString",
+    "calories": 25,
+    "cooking_time": 240,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/spinach",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Squid",
+    "descriptive_name": "SquidDescriptiveNameString",
+    "description": "SquidDescriptionString",
+    "calories": 120,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/squid",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.013,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.026,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.04,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Stock",
+    "descriptive_name": "StockDescriptiveNameString",
+    "description": "StockDescriptionString",
+    "calories": 90,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/stock",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 2,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Strawberry",
+    "descriptive_name": "StrawberryDescriptiveNameString",
+    "description": "StrawberryDescriptionString",
+    "calories": 35,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/strawberry",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 7,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sturgeon",
+    "descriptive_name": "SturgeonDescriptiveNameString",
+    "description": "SturgeonDescriptionString",
+    "calories": 103,
+    "cooking_time": 420,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sturgeon",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 2,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sugar",
+    "descriptive_name": "SugarDescriptiveNameString",
+    "description": "SugarDescriptionString",
+    "calories": 400,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sugar",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 50,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Swordfish",
+    "descriptive_name": "SwordfishDescriptiveNameString",
+    "description": "SwordfishDescriptionString",
+    "calories": 170,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/swordfish",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tarragon",
+    "descriptive_name": "TarragonDescriptiveNameString",
+    "description": "TarragonDescriptionString",
+    "calories": 170,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tarragon",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tea_Leaves",
+    "descriptive_name": "TeaLeavesDescriptiveNameString",
+    "description": "TeaLeavesDescriptionString",
+    "calories": 170,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tea_leaves",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 25,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.016,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.032,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.048,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Thyme",
+    "descriptive_name": "ThymeDescriptiveNameString",
+    "description": "ThymeDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/thyme",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.016,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.032,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.048,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Dill",
+    "descriptive_name": "DillNameString",
+    "description": "ThymeDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/Dill",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.016,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.032,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.048,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tomato",
+    "descriptive_name": "TomatoDescriptiveNameString",
+    "description": "TomatoDescriptionString",
+    "calories": 30,
+    "cooking_time": 480,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tomato",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 6,
+      "SWEET": 4,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Trout",
+    "descriptive_name": "TroutDescriptiveNameString",
+    "description": "TroutDescriptionString",
+    "calories": 90,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/trout",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tuna",
+    "descriptive_name": "TunaDescriptiveNameString",
+    "description": "TunaDescriptionString",
+    "calories": 130,
+    "cooking_time": 480,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tuna",
+    "tags": [
+      "Seafood"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.018,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.036,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.05,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Turkey",
+    "descriptive_name": "TurkeyDescriptiveNameString",
+    "description": "TurkeyDescriptionString",
+    "calories": 130,
+    "cooking_time": 660,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/turkey",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.006,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.012,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.02,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Turmeric",
+    "descriptive_name": "TurmericDescriptiveNameString",
+    "description": "TurmericDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/turmeric",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 20,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Vanilla",
+    "descriptive_name": "VanillaDescriptiveNameString",
+    "description": "VanillaDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/vanilla",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.3,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.6,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.9,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Veal",
+    "descriptive_name": "VealDescriptiveNameString",
+    "description": "VealDescriptionString",
+    "calories": 400,
+    "cooking_time": 600,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/veal",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.016,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.032,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.048,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Vegetable_Stock",
+    "descriptive_name": "VegetableStockDescriptiveNameString",
+    "description": "VegetableStockDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/vegetable_stock",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 2,
+      "ACID": 1,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Vinegar",
+    "descriptive_name": "VinegarDescriptiveNameString",
+    "description": "VinegarDescriptionString",
+    "calories": 120,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/vinegar",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 20,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Walnuts",
+    "descriptive_name": "WalnutsDescriptiveNameString",
+    "description": "WalnutsDescriptionString",
+    "calories": 600,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/walnut",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 90
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.04,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.08,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.12,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Watermelon",
+    "descriptive_name": "WatermelonDescriptiveNameString",
+    "description": "WatermelonDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/anguria",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.003,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "White_Wine",
+    "descriptive_name": "WhiteWineDescriptiveNameString",
+    "description": "WhiteWineDescriptionString",
+    "calories": 80,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/white_wine",
+    "tags": [
+      "Alcohol",
+      "Wine"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Worcestershire_Sauce",
+    "descriptive_name": "WorcestershireSauceDescriptiveNameString",
+    "description": "WorcestershireSauceDescriptionString",
+    "calories": 80,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/worcestershire_sauce",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 15,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Yogurt",
+    "descriptive_name": "YogurtDescriptiveNameString",
+    "description": "YogurtDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/yogurt",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 1,
+      "FAT": 2,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Zucchini",
+    "descriptive_name": "ZucchiniDescriptiveNameString",
+    "description": "ZucchiniDescriptionString",
+    "calories": 17,
+    "cooking_time": 450,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/zucchini",
+    "tags": [
+      "Vegetables"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 1,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pistachio",
+    "descriptive_name": "PistachioDescriptiveNameString",
+    "description": "PistachioDescriptionString",
+    "calories": 17,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pistachio",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.03,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.06,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.09,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sour_Cream",
+    "descriptive_name": "SourCreamDescriptiveNameString",
+    "description": "SourCreamDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sour_cream",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 0,
+      "FAT": 15,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tofu",
+    "descriptive_name": "TofuDescriptiveNameString",
+    "description": "TofuDescriptionString",
+    "calories": 100,
+    "cooking_time": 400,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tofu",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.009,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Water",
+    "descriptive_name": "WaterDescriptiveNameString",
+    "description": "WaterDescriptionString",
+    "calories": 0,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/water",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 50,
+      "MEDIUM": 100,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0003,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0006,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.001,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "CoconutMilk",
+    "descriptive_name": "CoconutMilkDescriptiveNameString",
+    "description": "CoconutMilkDescriptionString",
+    "calories": 250,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/coconutmilk",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 1,
+      "SWEET": 6,
+      "FAT": 7,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 25,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.004,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.008,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.012,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cardamom",
+    "descriptive_name": "CardamomDescriptiveNameString",
+    "description": "CardamomDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cardamom",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Chives",
+    "descriptive_name": "ChivesDescriptiveNameString",
+    "description": "ChivesDescriptionString",
+    "calories": 40,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/chives",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 25
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "FavaBeans",
+    "descriptive_name": "FavaBeansDescriptiveNameString",
+    "description": "FavaBeansDescriptionString",
+    "calories": 120,
+    "cooking_time": 300,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/fava_beans",
+    "tags": [
+      "Legume"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 25,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.0022,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.0044,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.0066,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cilantro",
+    "descriptive_name": "CilantroDescriptiveNameString",
+    "description": "CilantroDescriptionString",
+    "calories": 20,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cilantro",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "FishSauce",
+    "descriptive_name": "FishSauceDescriptiveNameString",
+    "description": "FishSauceDescriptionString",
+    "calories": 200,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/FishSauce",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 5,
+      "ACID": 2,
+      "SWEET": 6,
+      "FAT": 0,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 15,
+      "LARGE": 30
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "VeganCheese",
+    "descriptive_name": "VeganCheeseDescriptiveNameString",
+    "description": "VeganCheeseDescriptionString",
+    "calories": 300,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/vegancheese",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 5,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "VeganMilk",
+    "descriptive_name": "VeganMilkDescriptiveNameString",
+    "description": "VeganMilkDescriptionString",
+    "calories": 150,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/VeganMilk",
+    "tags": [
+      "Other"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 3,
+      "FAT": 5,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.024,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Seasoned_Cow_Cheese",
+    "descriptive_name": "Seasoned_CowCheeseDescriptiveNameString",
+    "description": "CowCheeseDescriptionString",
+    "calories": 280,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cow_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 6,
+      "SALT": 5,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 6,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Seasoned_Sheep_Cheese",
+    "descriptive_name": "Seasoned_SheepCheeseDescriptiveNameString",
+    "description": "SheepCheeseDescriptionString",
+    "calories": 370,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sheep_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 4,
+      "SALT": 7,
+      "ACID": 2,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 2
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 30,
+      "LARGE": 90
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Quinoa",
+    "descriptive_name": "QuinoaDescriptiveNameString",
+    "description": "QuinoaDescriptionString",
+    "calories": 285,
+    "cooking_time": 500,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/quinoa",
+    "tags": [
+      "Carbs"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.007,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.014,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.021,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pomegranate",
+    "descriptive_name": "PomegranateDescriptiveNameString",
+    "description": "PomegranateDescriptionString",
+    "calories": 60,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pomegranate",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 3,
+      "SWEET": 8,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 25,
+      "LARGE": 100
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Cheddar",
+    "descriptive_name": "CheddarDescriptiveNameString",
+    "description": "CheddarDescriptionString",
+    "calories": 380,
+    "cooking_time": 120,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/cheddar",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 2,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Brie",
+    "descriptive_name": "BrieDescriptiveNameString",
+    "description": "BrieDescriptionString",
+    "calories": 330,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/brie",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.024,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Gouda",
+    "descriptive_name": "GoudaDescriptiveNameString",
+    "description": "GoudaDescriptionString",
+    "calories": 350,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/gouda",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 5,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Marjoram",
+    "descriptive_name": "MarjoramDescriptiveNameString",
+    "description": "MarjoramDescriptionString",
+    "calories": 7,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/marjoram",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 15,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 1,
+      "MEDIUM": 5,
+      "LARGE": 10
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.041,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.082,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.125,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pigeon",
+    "descriptive_name": "PigeonDescriptiveNameString",
+    "description": "PigeonDescriptionString",
+    "calories": 140,
+    "cooking_time": 700,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pigeon",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 80,
+      "LARGE": 180
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.011,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.022,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.033,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Goat",
+    "descriptive_name": "GoatDescriptiveNameString",
+    "description": "GoatDescriptionString",
+    "calories": 170,
+    "cooking_time": 660,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/goat",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.012,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.024,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.036,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Goose",
+    "descriptive_name": "GooseDescriptiveNameString",
+    "description": "GooseDescriptionString",
+    "calories": 145,
+    "cooking_time": 720,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/goose",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 1,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 1,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 60,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Pheasant",
+    "descriptive_name": "PheasantDescriptiveNameString",
+    "description": "PheasantDescriptionString",
+    "calories": 130,
+    "cooking_time": 600,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/pheasant",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Plantain",
+    "descriptive_name": "PlantainDescriptiveNameString",
+    "description": "PlantainDescriptionString",
+    "calories": 110,
+    "cooking_time": 0,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/plantain",
+    "tags": [
+      "Fruit"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 0,
+      "ACID": 2,
+      "SWEET": 3,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 25,
+      "MEDIUM": 75,
+      "LARGE": 250
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.002,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.004,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.006,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Port_Wine",
+    "descriptive_name": "PortWineDescriptiveNameString",
+    "description": "PortWineDescriptionString",
+    "calories": 80,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/portwine",
+    "tags": [
+      "Alcohol",
+      "Wine"
+    ],
+    "flavor_values": {
+      "SOUR": 0,
+      "SALT": 0,
+      "ACID": 5,
+      "SWEET": 5,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 10,
+      "MEDIUM": 50,
+      "LARGE": 150
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.005,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.01,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.015,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Sumac",
+    "descriptive_name": "SumacDescriptiveNameString",
+    "description": "SumacDescriptionString",
+    "calories": 10,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/sumac",
+    "tags": [
+      "Spice"
+    ],
+    "flavor_values": {
+      "SOUR": 50,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 3,
+      "MEDIUM": 10,
+      "LARGE": 15
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.008,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.016,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.025,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Tahini",
+    "descriptive_name": "TahiniDescriptiveNameString",
+    "description": "TahiniDescriptionString",
+    "calories": 250,
+    "cooking_time": 0,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/tahini",
+    "tags": [
+      "Nut"
+    ],
+    "flavor_values": {
+      "SOUR": 10,
+      "SALT": 3,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 7,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 25,
+      "LARGE": 60
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.01,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.02,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.03,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Venison",
+    "descriptive_name": "VenisonDescriptiveNameString",
+    "description": "VenisonDescriptionString",
+    "calories": 250,
+    "cooking_time": 420,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/venison",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 2,
+      "SALT": 1,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 3,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.025,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.05,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.075,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Vodka",
+    "descriptive_name": "VodkaDescriptiveNameString",
+    "description": "VodkaDescriptionString",
+    "calories": 10,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/vodka",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 8,
+      "SALT": 0,
+      "ACID": 8,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Whiskey",
+    "descriptive_name": "WhiskeyDescriptiveNameString",
+    "description": "WhiskeyDescriptionString",
+    "calories": 10,
+    "cooking_time": 60,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/whiskey",
+    "tags": [
+      "Alcohol"
+    ],
+    "flavor_values": {
+      "SOUR": 8,
+      "SALT": 0,
+      "ACID": 4,
+      "SWEET": 0,
+      "FAT": 0,
+      "UMAMI": 0
+    },
+    "portions": {
+      "SMALL": 5,
+      "MEDIUM": 10,
+      "LARGE": 50
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.02,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.04,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.06,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "WildBoar",
+    "descriptive_name": "WildBoarDescriptiveNameString",
+    "description": "WildBoarDescriptionString",
+    "calories": 220,
+    "cooking_time": 600,
+    "default_quality_level": "NORMAL",
+    "points_cost": 1,
+    "icon_image": "Ingredients/wildboar",
+    "tags": [
+      "Meat"
+    ],
+    "flavor_values": {
+      "SOUR": 3,
+      "SALT": 0,
+      "ACID": 0,
+      "SWEET": 2,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.015,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.03,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.045,
+        "points_cost": 3
+      }
+    }
+  },
+  {
+    "name": "Feta",
+    "descriptive_name": "FetaCheeseDescriptiveNameString",
+    "description": "FetaCheeseDescriptionString",
+    "calories": 200,
+    "cooking_time": 120,
+    "default_quality_level": "NONE",
+    "points_cost": 1,
+    "icon_image": "Ingredients/goat_cheese",
+    "tags": [
+      "Dairy"
+    ],
+    "flavor_values": {
+      "SOUR": 5,
+      "SALT": 4,
+      "ACID": 0,
+      "SWEET": 0,
+      "FAT": 4,
+      "UMAMI": 1
+    },
+    "portions": {
+      "SMALL": 15,
+      "MEDIUM": 75,
+      "LARGE": 200
+    },
+    "quality_costs": {
+      "NORMAL": {
+        "unit_cost": 0.014,
+        "points_cost": 1
+      },
+      "FIRST_CHOICE": {
+        "unit_cost": 0.028,
+        "points_cost": 2
+      },
+      "GOURMET": {
+        "unit_cost": 0.042,
+        "points_cost": 3
+      }
+    }
+  }
+]

@@ -1,0 +1,41 @@
+# Comandi Git per caricare il progetto
+
+# 1. Naviga nella cartella del progetto
+cd chef_menu_generator
+
+# 2. Inizializza Git (se non già fatto)
+git init
+
+# 3. Aggiungi il remote
+git remote add origin https://github.com/jenz26/Chef_Generator.git
+
+# 4. Aggiungi tutti i file
+git add .
+
+# 5. Crea il primo commit
+git commit -m "Initial commit - Chef Menu Generator
+
+✨ Features:
+- Streamlit app for intelligent menu generation
+- 12 customer types with real game preferences
+- 447 recipes organized by category
+- Automatic cost calculation
+- Ingredient compatibility scoring
+- Interactive web interface
+
+🍽️ Ready for Streamlit Cloud deployment!"
+
+# 6. Push al repository
+git push -u origin main
+
+# Alternative se il branch è master:
+# git push -u origin master
+
+# 7. Files da verificare che siano presenti:
+# ✅ app.py (14KB) - Main Streamlit app
+# ✅ customer_types.json (14KB) - Customer data
+# ✅ recipes_database.json (1.7MB) - All recipes with costs
+# ✅ ingredients_data.json (192KB) - Ingredients database
+# ✅ matches_data.json (1.3MB) - Ingredient compatibility
+# ✅ requirements.txt (63B) - Python dependencies
+# ✅ README.md (4.7KB) - Documentation

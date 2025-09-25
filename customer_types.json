@@ -1,0 +1,607 @@
+[
+  {
+    "name": "Cheapskate",
+    "descriptive_name": "CheapskateCustomerName",
+    "description": "SummaryCheapskatesDescString",
+    "icon_image": "Customers/Cheapskate",
+    "favourite_tags": [
+      "Carbs"
+    ],
+    "secondary_favourite_tags": [
+      "Meat",
+      "Legume"
+    ],
+    "price_score_weight": 1.0,
+    "evaluation_score_weight": 0.1,
+    "tag_score_weight": 0.1,
+    "expectations": {
+      "Carbs": 0.8,
+      "Else": 1.0
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.3,
+        "cost_expectation": 5.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 5.5
+      },
+      "SideDish": {
+        "probability": 0.3,
+        "cost_expectation": 4.0
+      },
+      "Soup": {
+        "probability": 0.3,
+        "cost_expectation": 5.0
+      },
+      "Salad": {
+        "probability": 0.3,
+        "cost_expectation": 5.0
+      },
+      "Dessert": {
+        "probability": 0.3,
+        "cost_expectation": 4.0
+      },
+      "Beverage": {
+        "probability": 0.3,
+        "cost_expectation": 3.5
+      }
+    }
+  },
+  {
+    "name": "BlueCollar",
+    "descriptive_name": "BlueCollarCustomerName",
+    "description": "SummaryBlueCOllarDescString",
+    "icon_image": "Customers/BlueCollar",
+    "favourite_tags": [
+      "Carbs",
+      "Beer"
+    ],
+    "secondary_favourite_tags": [
+      "Legume"
+    ],
+    "price_score_weight": 1.0,
+    "evaluation_score_weight": 0.0,
+    "tag_score_weight": 0.65,
+    "expectations": {
+      "Carbs": 0.9,
+      "Beer": 0.9,
+      "Vegetarian": 1.3,
+      "Else": 1.1
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.2,
+        "cost_expectation": 5.5
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 8.5
+      },
+      "SideDish": {
+        "probability": 0.5,
+        "cost_expectation": 6.5
+      },
+      "Soup": {
+        "probability": 0.2,
+        "cost_expectation": 5.5
+      },
+      "Salad": {
+        "probability": 0.2,
+        "cost_expectation": 5.5
+      },
+      "Dessert": {
+        "probability": 0.2,
+        "cost_expectation": 5.5
+      },
+      "Beverage": {
+        "probability": 0.6,
+        "cost_expectation": 6.5
+      }
+    }
+  },
+  {
+    "name": "WhiteCollar",
+    "descriptive_name": "WhiteCollarCustomerName",
+    "description": "SummaryWhiteCollarDescString",
+    "icon_image": "Customers/WhiteCollar",
+    "favourite_tags": [
+      "Seafood",
+      "Wine"
+    ],
+    "secondary_favourite_tags": [
+      "Meat",
+      "Fruit"
+    ],
+    "price_score_weight": 0.25,
+    "evaluation_score_weight": 1.0,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Seafood": 1.15,
+      "Wine": 1.15,
+      "Carbs": 1.4,
+      "Else": 1.25
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.6,
+        "cost_expectation": 14.5
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 16.0
+      },
+      "SideDish": {
+        "probability": 0.2,
+        "cost_expectation": 9.0
+      },
+      "Soup": {
+        "probability": 0.6,
+        "cost_expectation": 14.0
+      },
+      "Salad": {
+        "probability": 0.2,
+        "cost_expectation": 9.0
+      },
+      "Dessert": {
+        "probability": 0.2,
+        "cost_expectation": 9.0
+      },
+      "Beverage": {
+        "probability": 1.0,
+        "cost_expectation": 14.0
+      }
+    }
+  },
+  {
+    "name": "FamilyLow",
+    "descriptive_name": "FamilyLowCustomerName",
+    "description": "SummaryFamilyLowDescString",
+    "icon_image": "Customers/FamilyLow",
+    "favourite_tags": [
+      "Carbs",
+      "Meat"
+    ],
+    "secondary_favourite_tags": [
+      "Seafood",
+      "Legume",
+      "Beer"
+    ],
+    "price_score_weight": 0.75,
+    "evaluation_score_weight": 0.0,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Meat": 0.9,
+      "Carbs": 0.9,
+      "Vegetarian": 1.3,
+      "Else": 1.1
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.7,
+        "cost_expectation": 7.5
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 10.5
+      },
+      "SideDish": {
+        "probability": 0.3,
+        "cost_expectation": 6.5
+      },
+      "Soup": {
+        "probability": 0.3,
+        "cost_expectation": 6.5
+      },
+      "Salad": {
+        "probability": 0.3,
+        "cost_expectation": 6.5
+      },
+      "Dessert": {
+        "probability": 0.7,
+        "cost_expectation": 7.0
+      },
+      "Beverage": {
+        "probability": 0.3,
+        "cost_expectation": 5.5
+      }
+    }
+  },
+  {
+    "name": "FamilyHigh",
+    "descriptive_name": "FamilyHighCustomerName",
+    "description": "SummaryFamilyHighDescString",
+    "icon_image": "Customers/FamilyHigh",
+    "favourite_tags": [
+      "Seafood",
+      "Dessert"
+    ],
+    "secondary_favourite_tags": [
+      "Meat"
+    ],
+    "price_score_weight": 0.0,
+    "evaluation_score_weight": 1.0,
+    "tag_score_weight": 0.5,
+    "expectations": {
+      "Seafood": 1.5,
+      "Dessert": 1.5,
+      "Vegan": 1.8,
+      "Else": 1.6
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.6,
+        "cost_expectation": 12.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 14.0
+      },
+      "SideDish": {
+        "probability": 0.6,
+        "cost_expectation": 11.0
+      },
+      "Soup": {
+        "probability": 0.6,
+        "cost_expectation": 14.0
+      },
+      "Salad": {
+        "probability": 0.3,
+        "cost_expectation": 11.0
+      },
+      "Dessert": {
+        "probability": 1.0,
+        "cost_expectation": 12.0
+      },
+      "Beverage": {
+        "probability": 0.6,
+        "cost_expectation": 12.0
+      }
+    }
+  },
+  {
+    "name": "TouristLow",
+    "descriptive_name": "TouristLowCustomerName",
+    "description": "SummaryTouristLowDescString",
+    "icon_image": "Customers/TouristLow",
+    "favourite_tags": [
+      "Meat",
+      "Wine"
+    ],
+    "secondary_favourite_tags": [
+      "Dessert",
+      "Seafood"
+    ],
+    "price_score_weight": 0.75,
+    "evaluation_score_weight": 0.0,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Meat": 0.9,
+      "Wine": 0.9,
+      "Else": 1.1
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.8,
+        "cost_expectation": 7.5
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 10.5
+      },
+      "SideDish": {
+        "probability": 0.3,
+        "cost_expectation": 6.5
+      },
+      "Soup": {
+        "probability": 0.3,
+        "cost_expectation": 8.5
+      },
+      "Salad": {
+        "probability": 0.3,
+        "cost_expectation": 8.5
+      },
+      "Dessert": {
+        "probability": 0.8,
+        "cost_expectation": 6.5
+      },
+      "Beverage": {
+        "probability": 1.0,
+        "cost_expectation": 4.5
+      }
+    }
+  },
+  {
+    "name": "TouristHigh",
+    "descriptive_name": "TouristHighCustomerName",
+    "description": "SummaryTouristHighDescString",
+    "icon_image": "Customers/TouristHigh",
+    "favourite_tags": [
+      "Dessert",
+      "Wine"
+    ],
+    "secondary_favourite_tags": [
+      "Seafood",
+      "Meat"
+    ],
+    "price_score_weight": 0.0,
+    "evaluation_score_weight": 0.75,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Dessert": 1.5,
+      "Wine": 1.5,
+      "Meat": 1.8,
+      "Else": 1.7
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 1.0,
+        "cost_expectation": 13.0
+      },
+      "MainCourse": {
+        "probability": 0.7,
+        "cost_expectation": 15.0
+      },
+      "SideDish": {
+        "probability": 1.0,
+        "cost_expectation": 10.0
+      },
+      "Soup": {
+        "probability": 0.3,
+        "cost_expectation": 13.0
+      },
+      "Salad": {
+        "probability": 0.3,
+        "cost_expectation": 10.0
+      },
+      "Dessert": {
+        "probability": 0.7,
+        "cost_expectation": 10.0
+      },
+      "Beverage": {
+        "probability": 0.7,
+        "cost_expectation": 11.0
+      }
+    }
+  },
+  {
+    "name": "Vegetarian",
+    "descriptive_name": "VegetarianCustomerName",
+    "description": "SummaryVegetarianDescString",
+    "icon_image": "Customers/Vegetarian",
+    "favourite_tags": [
+      "Vegetarian",
+      "Nut",
+      "Vegetables",
+      "Fruit"
+    ],
+    "secondary_favourite_tags": [
+      "Vegan",
+      "Legume"
+    ],
+    "price_score_weight": 0.5,
+    "evaluation_score_weight": 0.33,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Else": 1.1
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.6,
+        "cost_expectation": 14.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 9.0
+      },
+      "SideDish": {
+        "probability": 0.6,
+        "cost_expectation": 8.0
+      },
+      "Soup": {
+        "probability": 0.6,
+        "cost_expectation": 11.0
+      },
+      "Salad": {
+        "probability": 1.0,
+        "cost_expectation": 11.0
+      },
+      "Dessert": {
+        "probability": 0.6,
+        "cost_expectation": 7.0
+      },
+      "Beverage": {
+        "probability": 0.6,
+        "cost_expectation": 7.0
+      }
+    }
+  },
+  {
+    "name": "Vegan",
+    "descriptive_name": "VeganCustomerName",
+    "description": "SummaryVeganDescString",
+    "icon_image": "Customers/Vegan",
+    "favourite_tags": [
+      "Vegan"
+    ],
+    "secondary_favourite_tags": [],
+    "price_score_weight": 0.0,
+    "evaluation_score_weight": 0.0,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Else": 1.2
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.7,
+        "cost_expectation": 11.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 12.0
+      },
+      "SideDish": {
+        "probability": 0.7,
+        "cost_expectation": 11.0
+      },
+      "Soup": {
+        "probability": 0.7,
+        "cost_expectation": 15.0
+      },
+      "Salad": {
+        "probability": 0.7,
+        "cost_expectation": 15.0
+      },
+      "Dessert": {
+        "probability": 0.7,
+        "cost_expectation": 8.0
+      },
+      "Beverage": {
+        "probability": 0.7,
+        "cost_expectation": 8.0
+      }
+    }
+  },
+  {
+    "name": "TrashCustomers",
+    "descriptive_name": "",
+    "description": "",
+    "icon_image": "",
+    "favourite_tags": [],
+    "secondary_favourite_tags": [],
+    "price_score_weight": 1.0,
+    "evaluation_score_weight": 1.0,
+    "tag_score_weight": 1.0,
+    "expectations": {
+      "Else": 0.01
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.3,
+        "cost_expectation": 9.0
+      },
+      "MainCourse": {
+        "probability": 0.3,
+        "cost_expectation": 14.0
+      },
+      "SideDish": {
+        "probability": 0.8,
+        "cost_expectation": 9.0
+      },
+      "Soup": {
+        "probability": 0.8,
+        "cost_expectation": 11.0
+      },
+      "Salad": {
+        "probability": 1.0,
+        "cost_expectation": 14.0
+      },
+      "Dessert": {
+        "probability": 0.0,
+        "cost_expectation": 9.0
+      },
+      "Beverage": {
+        "probability": 0.1,
+        "cost_expectation": 14.0
+      }
+    }
+  },
+  {
+    "name": "FoodEnthusiast",
+    "descriptive_name": "FoodEnthusiastCustomerName",
+    "description": "SummaryFoodEnthDescString",
+    "icon_image": "Customers/FoodEnthusiast",
+    "favourite_tags": [
+      "Beer"
+    ],
+    "secondary_favourite_tags": [
+      "Wine",
+      "Meat"
+    ],
+    "price_score_weight": 0.45,
+    "evaluation_score_weight": 1.0,
+    "tag_score_weight": 0.0,
+    "expectations": {
+      "Else": 1.35
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.6,
+        "cost_expectation": 9.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 12.0
+      },
+      "SideDish": {
+        "probability": 0.6,
+        "cost_expectation": 9.0
+      },
+      "Soup": {
+        "probability": 0.6,
+        "cost_expectation": 9.0
+      },
+      "Salad": {
+        "probability": 0.6,
+        "cost_expectation": 9.0
+      },
+      "Dessert": {
+        "probability": 0.6,
+        "cost_expectation": 6.5
+      },
+      "Beverage": {
+        "probability": 0.6,
+        "cost_expectation": 4.5
+      }
+    }
+  },
+  {
+    "name": "Gourmet",
+    "descriptive_name": "GourmetCustomerName",
+    "description": "SummaryGourmetsDescString",
+    "icon_image": "Customers/Gourmet",
+    "favourite_tags": [
+      "Wine"
+    ],
+    "secondary_favourite_tags": [
+      "Seafood"
+    ],
+    "price_score_weight": 0.0,
+    "evaluation_score_weight": 1.0,
+    "tag_score_weight": 0.0,
+    "expectations": {
+      "Else": 2.0
+    },
+    "menu_section_info": {
+      "Appetizer": {
+        "probability": 0.6,
+        "cost_expectation": 16.0
+      },
+      "MainCourse": {
+        "probability": 1.0,
+        "cost_expectation": 20.0
+      },
+      "SideDish": {
+        "probability": 0.6,
+        "cost_expectation": 12.0
+      },
+      "Soup": {
+        "probability": 0.6,
+        "cost_expectation": 16.0
+      },
+      "Salad": {
+        "probability": 0.6,
+        "cost_expectation": 14.0
+      },
+      "Dessert": {
+        "probability": 0.6,
+        "cost_expectation": 16.0
+      },
+      "Beverage": {
+        "probability": 1.0,
+        "cost_expectation": 12.0
+      }
+    }
+  }
+]
