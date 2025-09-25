@@ -4,14 +4,16 @@
 git add app.py
 
 # 2. Commit delle correzioni
-git commit -m "Fix: Corretto tutti gli errori di struttura JSON
+git commit -m "Fix: Corretto tutti gli errori di struttura JSON e variabili
 
 ✅ Fixed:
 - recipes['recipes'] -> recipes_by_section
 - customers['customer_types'] -> customers (array diretto)
+- NameError: ingredients -> ingredients_data parameter
 - Conteggio ricette totali
 - Grafico distribuzione categorie
 - Tutti i riferimenti ai dati clientela
+- Passaggio parametri tra funzioni
 
 🚀 App ora completamente funzionante!"
 

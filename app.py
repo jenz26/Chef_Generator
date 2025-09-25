@@ -32,7 +32,7 @@ def load_data():
 
     return customers, recipes, ingredients, matches
 
-def calculate_recipe_appeal(recipe, customer_type, customer_data):
+def calculate_recipe_appeal(recipe, customer_type, customer_data, ingredients_data):
     """Calcola l'appeal di una ricetta per un tipo di cliente"""
     score = 0
 
@@ -51,7 +51,7 @@ def calculate_recipe_appeal(recipe, customer_type, customer_data):
     for ingredient in recipe.get('ingredients', []):
         ingredient_name = ingredient['name'].replace('Tier1', '').replace('Tier2', '').replace('Tier3', '')
         # Trova i tag dell'ingrediente
-        for ing_data in ingredients:
+        for ing_data in ingredients_data:
             if ingredient_name in ing_data['name']:
                 recipe_tags.update(ing_data.get('tags', []))
                 break
@@ -79,7 +79,7 @@ def calculate_recipe_appeal(recipe, customer_type, customer_data):
 
     return min(score, 1.0)  # Cap a 1.0
 
-def generate_menu_for_customer(customer_type, recipes_by_section, customer_data):
+def generate_menu_for_customer(customer_type, recipes_by_section, customer_data, ingredients_data):
     """Genera un menù ottimizzato per un tipo di cliente"""
     menu = {}
     total_cost = 0
@@ -94,7 +94,7 @@ def generate_menu_for_customer(customer_type, recipes_by_section, customer_data)
         # Calcola appeal per tutte le ricette della sezione
         recipe_appeals = []
         for recipe in recipes_by_section[section]:
-            appeal = calculate_recipe_appeal(recipe, customer_type, customer_data)
+            appeal = calculate_recipe_appeal(recipe, customer_type, customer_data, ingredients_data)
             recipe_appeals.append((recipe, appeal))
 
         # Ordina per appeal e prendi le migliori
@@ -186,7 +186,8 @@ def main():
         menu, total_cost = generate_menu_for_customer(
             selected_customer,
             recipes_by_section,
-            customer_data
+            customer_data,
+            ingredients
         )
 
         # Header risultati
