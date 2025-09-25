@@ -155,7 +155,7 @@ def main():
     st.sidebar.header("🎛️ Configurazione Menu")
 
     # Selezione tipo cliente
-    customer_names = [customer['name'] for customer in customers['customer_types']]
+    customer_names = [customer['name'] for customer in customers]
     selected_customer = st.sidebar.selectbox(
         "Tipo di Clientela",
         customer_names,
@@ -164,7 +164,7 @@ def main():
 
     # Trova dati cliente selezionato
     customer_data = None
-    for customer in customers['customer_types']:
+    for customer in customers:
         if customer['name'] == selected_customer:
             customer_data = customer
             break
@@ -340,7 +340,7 @@ def main():
         st.subheader("👥 Tipi di Clientela Disponibili")
 
         customer_summary = []
-        for customer in customers['customer_types']:
+        for customer in customers:
             customer_summary.append({
                 'Tipo': customer['name'],
                 'Tag Preferiti': ', '.join(customer.get('favourite_tags', [])[:3]),

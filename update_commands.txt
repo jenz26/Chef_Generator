@@ -4,12 +4,16 @@
 git add app.py
 
 # 2. Commit delle correzioni
-git commit -m "Fix: Corretto errore KeyError per struttura JSON
+git commit -m "Fix: Corretto tutti gli errori di struttura JSON
 
-- Fixed recipes['recipes'] -> recipes_by_section
-- Fixed conteggio ricette totali
-- Fixed grafico distribuzione categorie
-- App ora compatibile con la struttura JSON corretta"
+✅ Fixed:
+- recipes['recipes'] -> recipes_by_section
+- customers['customer_types'] -> customers (array diretto)
+- Conteggio ricette totali
+- Grafico distribuzione categorie
+- Tutti i riferimenti ai dati clientela
+
+🚀 App ora completamente funzionante!"
 
 # 3. Push delle modifiche
 git push origin master
